@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+  xml:base="http://www.smashingmagazine.com/wp-atom.php"
+   >
+	<title type="text">Smashing Magazine</title>
+	<subtitle type="text"></subtitle>
+
+	<updated>2009-07-20T18:48:16Z</updated>
+	<generator uri="http://wordpress.org/" version="2.7.1">WordPress</generator>
+
+	<link rel="alternate" type="text/html" href="http://www.smashingmagazine.com" />
+	<id>http://www.smashingmagazine.com/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://www.smashingmagazine.com/feed/atom/" />
+
+			<entry>
+		<author>
+			<name>Cameron Chapman</name>
+					</author>
+		<title type="html"><![CDATA[50 New CSS Techniques For Your Next Web Design]]></title>
+		<link rel="alternate" type="text/html" href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/" />
+		<id>http://www.smashingmagazine.com/?p=8930</id>
+		<updated>2009-07-20T09:00:23Z</updated>
+		<published>2009-07-20T08:43:22Z</published>
+		<category scheme="http://www.smashingmagazine.com" term="CSS" /><category scheme="http://www.smashingmagazine.com" term="techniques" /><category scheme="http://www.smashingmagazine.com" term="useful" />		<summary type="html"><![CDATA[<table width="450"><tr><td width="450"><div style="width:450px;">
+     <img src="http://creatives.commindo-media.de/static/smashing-magazine-advertisement.gif" alt="" border="0" /><br />
+     <a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=56" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=56" border="0" alt="" /></a>&nbsp;<a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=63" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=63" border="0" alt="" /></a>
+   </div></td></tr></table> <!-- <img src="http://www.smashingmagazine.com/images/post-pictures/css-buttons.jpg" /> --><p>CSS is almost certainly one of the best developments in web design since the first graphical web browsers were adopted on a wide scale. Where tables created clunky, slow-loading pages, CSS created much more streamlined and usable web pages. Plus, CSS has allowed designers to achieve a number of different styles that used to only be possible with images.</p>
+
+<p>One of the best parts of CSS is that it's so simple once you know the basics. Where tables used to make incredibly complex and sometimes impossible-to-decipher code, CSS keeps things clean and simple. Add a few comments to keep everything organized and it becomes an absolute dream to work with.</p>
+
+<p><a href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/"><img src="http://87.237.120.170/wp-content/uploads/images/fresh-css-techniques/56.gif" width="480" height="300" alt=" Super Awesome Buttons with CSS3 and RGBA" /></a></p> 
+
+<p>Below are 50 fresh CSS tricks, techniques and tutorials that will help you to improve the quality of your next web design. Be sure to check out our previous article: <a href="http://www.smashingmagazine.com/2007/01/19/53-css-techniques-you-couldnt-live-without/">53 CSS-Techniques You Couldn't Live Without</a>.</p>]]></summary>
+		<content type="html" xml:base="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/"><![CDATA[
+<!-- google_ad_section_start -->
+<table width="450">
+<tr>
+<td width="450">
+<div style="width:450px;">
+     <img src="http://creatives.commindo-media.de/static/smashing-magazine-advertisement.gif" alt="" border="0" /><br />
+     <a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=56" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=56" border="0" alt="" /></a>&nbsp;<a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=63" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=63" border="0" alt="" /></a>
+   </div>
+</td>
+</tr>
+</table>
+<p>CSS is almost certainly one of the best developments in web design since the first graphical web browsers were adopted on a wide scale. Where tables created clunky, slow-loading pages, CSS created much more streamlined and usable web pages. Plus, CSS has allowed designers to achieve a number of different styles that used to only be possible with images.</p>
+<p>One of the best parts of CSS is that it&#8217;s so simple once you know the basics. Where tables used to make incredibly complex and sometimes impossible-to-decipher code, CSS keeps things clean and simple. Add a few comments to keep everything organized and it becomes an absolute dream to work with.</p>
+<p>Below are 50 fresh CSS tricks, techniques and tutorials that will help you to improve the quality of your next web design. Be sure to check out our previous article: <a href="http://www.smashingmagazine.com/2007/01/19/53-css-techniques-you-couldnt-live-without/">53 CSS-Techniques You Couldn&#8217;t Live Without</a>.</p>
+<h3>1. Security and Performance</h3>
+<p>While CSS is often thought of as merely a styling language, there are ways you can use it to add security to your site. There are also ways you can optimize your CSS to improve page load times. Both are discussed below.</p>
+<h4>Make your pages load faster by combining and compressing javascript and css files</h4>
+<p><a href="http://rakaz.nl/item/make_your_pages_load_faster_by_combining_and_compressing_javascript_and_css_files">This tutorial</a> shows you how to create a PHP script to compress and combine multiple CSS and/or JavaScript files with gzip when they&#8217;re called for by a browser. It speeds up the page load times while making it possible to still edit the individual CSS or JavaScript files without having to combine and re-compress everything each times.</p>
+<p>Informal testing showed that a group of JavaScript files were reduced from 168Kb (and 1905 ms to transfer) to 37Kb (and 400 ms). There wasn&#8217;t any data available for the effect it had on CSS files, but I&#8217;d guess it&#8217;s probably pretty similar.</p>
+<p class="showcase"><a href="http://rakaz.nl/item/make_your_pages_load_faster_by_combining_and_compressing_javascript_and_css_files"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/makeyourpagesloadfaster.jpg" height="279" width="480" /></a></p>
+<h4>The Definitive Post on Gzipping Your CSS</h4>
+<p>This <a href="http://www.fiftyfoureleven.com/weblog/web-development/css/the-definitive-css-gzip-method">post</a> covers the best and most recent methods for using GZIP to compress your CSS. It currently covers two different methods, both equally effective. One involves adding a bit of PHP to your CSS file (and renaming the file with a PHP extension instead of CSS) while the other method involves using the same PHP code with some additions but in a separate file.</p>
+<p class="showcase"><a href="http://www.fiftyfoureleven.com/weblog/web-development/css/the-definitive-css-gzip-method"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/definitivecssgzipmethod.jpg" height="353" width="480" /></a></p>
+<h4>Clickjane.css: A CSS User Style Sheet to Help Detect and Avoid Clickjacking Attacks</h4>
+<p>This <a href="http://maymay.net/blog/2008/12/29/clickjanecss-a-css-user-style-sheet-to-help-detect-and-avoid-clickjacking-attacks/">post</a> covers how to use clickjane.css to prevent clickjacking, a class of security vulnerabilities kind of like phishing scams and more formally referred to as <em>user interface redressing</em>. It&#8217;s cross-browser compatible but, admittedly, probably only covers a small range of potential clickjacking vulnerabilities. It&#8217;s still a good place to start, though. </p>
+<p class="showcase"><a href="http://maymay.net/blog/2008/12/29/clickjanecss-a-css-user-style-sheet-to-help-detect-and-avoid-clickjacking-attacks/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/clickjanecsshelpdetectandav.jpg" height="307" width="480" /></a></p>
+<h4>5 Step Style Sheet Weight Loss Program</h4>
+<p>This <a href="http://www.sohtanaka.com/web-design/optimizing-css-tutorial/">post</a> shows five different ways to trim the size of your style sheets. Techniques range from learning how to group selectors to using CSS shorthand. Each technique is thoroughly explained and includes related resources.</p>
+<p class="showcase"><a href="http://www.sohtanaka.com/web-design/optimizing-css-tutorial/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/5stepcssweightlossprogram.jpg" height="259" width="480" /></a></p>
+<h3>2. Page Layout</h3>
+<p>This is what CSS was built for. The options are almost endless, especially as CSS3 becomes the new standard.</p>
+<h4>Aligning Inline Images with the Vertical-Align Property</h4>
+<p>The default vertical alignment for inline images in text sometimes looks not-so-great. This <a href="http://www.maxdesign.com.au/2008/10/05/vertical-align/">tutorial</a> shows you how to better align inline images with your site&#8217;s type. It goes over the different types of vertical alignment and what they mean in relation to type.</p>
+<p class="showcase"><a href="http://www.maxdesign.com.au/2008/10/05/vertical-align/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/aligningimageswithverticala.jpg" width="480" height="234" /></a></p>
+<h4>CSS Centering</h4>
+<p>This <a href="http://www.maxdesign.com.au/presentation/center/">post</a> includes instructions for centering liquid layouts with CSS. It&#8217;s very simple and straight-forward and works in virtually all browsers. Basically, it just uses left and right margins combined with some additional code to make it cross-browser compatible.</p>
+<p class="showcase"><a href="http://www.maxdesign.com.au/presentation/center/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/csscentering.jpg" height="162" width="480" /></a></p>
+<h4>Making Your Footer Stay Put with CSS</h4>
+<p>Keeping footers at the bottom of your pages can be a real hassle with CSS, depending on how the rest of your page is set up. This <a href="http://fortysevenmedia.com/blog/archives/making_your_footer_stay_put_with_css/">tutorial</a> shows exactly how to keep your footer where it should be&amp;mdash;below the rest of your content! It&#8217;s a very thorough post, with complete, step-by-step instructions.</p>
+<p class="showcase"><a href="http://fortysevenmedia.com/blog/archives/making_your_footer_stay_put_with_css/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/makingyourfooterstayputwith.jpg" width="480" height="384" /></a></p>
+<h4>Vertical Centering with CSS</h4>
+<p>This <a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/">post</a> covers five excellent ways to center your content vertically. It includes the good and bad for each method along with complete instructions for implementing them. The methods range from using divs that act like tables to using absolute positions.</p>
+<p class="showcase"><a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/verticalcenteringwithcss.jpg" width="480" height="305" /></a></p>
+<h4>Handy Tips for Creating a Print CSS Stylesheet</h4>
+<p>This <a href="http://line25.com/tutorials/handy-tips-for-creating-a-print-css-stylesheet">post</a> is filled with great tips for creating better print stylesheets. It includes instructions for everything from including link destinations after the link text to splitting comments onto a new page. Pick and choose from the techniques offered or copy the whole stylesheet.</p>
+<p class="showcase"><a href="http://line25.com/tutorials/handy-tips-for-creating-a-print-css-stylesheet"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/handytipsforcreatingaprintc.jpg" width="480" height="365" /></a></p>
+<h4>Fluid Images</h4>
+<p>Fluid layouts are great. They generally look and function just fine until you start introducing fixed-width elements within them&amp;mdash;like images. This <a href="http://unstoppablerobotninja.com/entry/fluid-images/">post</a> shows how to make your images fluid, too. And it works for most embedded video. And while the basic technique includes just one CSS property, there is a workaround necessary to make it work on Windows machines.</p>
+<p class="showcase"><a href="http://unstoppablerobotninja.com/entry/fluid-images/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/fluidimages.jpg" height="78" width="480" /></a></p>
+<h4>Flexible Equal Height Columns</h4>
+<p>This <a href="http://www.socialgeek.be/blog/read/flexible-equal-height-columns">tutorial</a> shows how to create completely versatile equal height columns using valid and semantic markup. It&#8217;s cross-browser compatible and works with both fixed, fluid, and even elastic designs. It&#8217;s a very complete tutorial but not at all complicated.</p>
+<p class="showcase"><a href="http://www.socialgeek.be/blog/read/flexible-equal-height-columns"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/flexibleequalheightcolumns.jpg" width="480" height="151" /></a></p>
+<h4>CSS Columns with Borders</h4>
+<p>This is a <a href="http://www.onderhond.com/blog/onderhond/css-columns-with-borders">technique</a> for creating equal-height columns with CSS that have borders. It uses a series of nested divs to achieve the effect instead of images. The end result is fantastic.</p>
+<p class="showcase"><a href="http://www.onderhond.com/blog/onderhond/css-columns-with-borders"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/csscolumnswithborders.jpg" height="156" width="480" /></a></p>
+<h4>Creating a Polaroid Photo Viewer with CSS3 and jQuery</h4>
+<p>The photo gallery created with this <a href="http://www.marcofolio.net/webdesign/creating_a_polaroid_photo_viewer_with_css3_and_jquery.html">technique</a> is absolutely awesome. The HTML and CSS aren&#8217;t super-complicated, and everything is explained really well. While CSS3 isn&#8217;t supported by every browser, this does appear to degrade gracefully, making it perfectly fine to use as long as you don&#8217;t mind some visitors not getting the full effect.</p>
+<p class="showcase"><a href="http://www.marcofolio.net/webdesign/creating_a_polaroid_photo_viewer_with_css3_and_jquery.html"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/polaroidphotoviewer.jpg" height="269" width="480" /></a></p>
+<h4>A Killer Collection of Global CSS Reset Styles</h4>
+<p>An incredibly complete <a href="http://perishablepress.com/press/2007/10/23/a-killer-collection-of-global-css-reset-styles/">collection</a> of global resets, this post covers pretty much every reset you could possibly need. Some are short and sweet, consisting of only a couple of properties, while others are very complete and reset everything you might consider resetting.</p>
+<p class="showcase"><a href="http://perishablepress.com/press/2007/10/23/a-killer-collection-of-global-css-reset-styles/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/akillercollectionofglobalcs.jpg" width="480" height="153" /></a></p>
+<h4>Making Module Layout Systems</h4>
+<p>This <a href="http://24ways.org/2008/making-modular-layout-systems">tutorial</a> gives complete instructions for creating modular layout systems using CSS. This makes it practical to use different grid-based divs as needed for individual content elements. The end result provides tons of flexibility for dealing with everything from images to text while keeping everything uniform and balanced.</p>
+<p class="showcase"><a href="http://24ways.org/2008/making-modular-layout-systems"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/makingmodularlayoutsystems.jpg" width="480" height="228" /></a></p>
+<h4>Multiple Backgrounds (CSS3)</h4>
+<p>This <a href="http://group.mind-productions.com/articles/multiple_backgrounds__css3_/">tutorial</a> shows how to implement multiple backgrounds using CSS3. It&#8217;s currently only supported by Safari, but the tutorial includes tricks to make it work in non-supported browsers. Currently, it doesn&#8217;t validate, but once the CSS3 standard is completed it&#8217;s likely it will.</p>
+<p class="showcase"><a href="http://group.mind-productions.com/articles/multiple_backgrounds__css3_/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/multiplebackgroundscss3.jpg" height="183" width="480" /></a></p>
+<h4>CSS3 Multiple Columns</h4>
+<p>Here&#8217;s a <a href="http://www.zenelements.co.uk/blog/css3-multiple-columns/">tutorial</a> for creating multi-column layouts with CSS3. The CSS is pretty simple and straight-forward, much easier than most current solutions to multi-column layouts. Unfortunately, this only works with Firefox, Safari and Chrome at the moment.</p>
+<p class="showcase"><a href="http://www.zenelements.co.uk/blog/css3-multiple-columns/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/css3multiplecolumns.jpg" height="155" width="480" /></a></p>
+<h4>Smart Columns with CSS and jQuery</h4>
+<p>This <a href="http://www.sohtanaka.com/web-design/smart-columns-w-css-jquery/">tutorial</a> shows how to create smart columns inside liquid layouts using a combination of CSS and jQuery. Basically, it fits as many columns into the base column size as possible and then distributes any leftover white space among the columns there. A very elegant solution if you want to allow for a variable number of columns without ending up with a bunch of leftover white space in your design.</p>
+<p class="showcase"><a href="http://www.sohtanaka.com/web-design/smart-columns-w-css-jquery/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/smartcolumnswithcssjquery.jpg" width="480" height="256" /></a></p>
+<h4>CSS Hack for Chrome, Safari and Internet Explorer</h4>
+<p>This <a href="http://www.giantisland.com/Resources/LitePacificHackforSafariAndIE7.aspx">tutorial</a> shows how to apply different style sheets based on the browser your visitors are using (at least in IE5-8, Google Chrome, and Safari 1-4). A very valuable technique if you want to use styles only supported in certain browsers without making your site look bad in unsupported browsers.</p>
+<h3>3. Menu and Navigation Customizations</h3>
+<p>Menu and navigation styles can really set your site apart if done well. Just remember, menus need to remain usable and functional no matter how they look.</p>
+<h4>Overlap That Menu!</h4>
+<p>Have you ever wanted to create menu items that overlap? <a href="http://www.cssbake.com/cookbook/overlap-that-menu/">This relatively-simple tutorial</a> shows you how to do just that using unique classes for your menu items. It also tells how to reorder the navigation items using the z-index. It&#8217;s a nice effect that isn&#8217;t difficult to achieve.</p>
+<p class="showcase"><a href="http://www.cssbake.com/cookbook/overlap-that-menu/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/overlapthatmenu.jpg" width="480" height="280" /></a></p>
+<h4>Super Awesome Buttons with CSS3 and RGBA</h4>
+<p>With a little CSS3 magic, you can created a <a href="http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba">scalable set of sexy buttons</a> with nearly half the CSS it would have taken with hex colors. Give it a go in your next project and see how it can help add that extra polish you want without huge impact on your code.</p>
+<p class="showcase"><a href="http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba"><img src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/56.gif" width="480" height="300" alt=" Super Awesome Buttons with CSS3 and RGBA" /></a></p>
+<h4>Custom Buttons 3.0</h4>
+<p><a href="http://stopdesign.com/eg/buttons/3.0/code.html">This page</a> shows a variety of rounded-corner (1px radius) buttons that don&#8217;t use images (other than for the optional background gradient). Just look at the source code for the page to see how it&#8217;s done.</p>
+<p class="showcase"><a href="http://stopdesign.com/eg/buttons/3.0/code.html"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/custombuttons30.jpg" height="186" width="480" /></a></p>
+<h4>Centered Tabs with CSS</h4>
+<p><a href="http://24ways.org/2005/centered-tabs-with-css">This tutorial</a> provides an alternative to the sliding doors method of creating tabs in CSS that allows tabs to be centered instead of only right- or left-aligned. It&#8217;s a multi-step tutorial but isn&#8217;t complicated.</p>
+<p class="showcase"><a href="http://24ways.org/2005/centered-tabs-with-css"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/centeredtabswithcss.jpg" height="244" width="480" /></a></p>
+<h4>Styling the Button Element with CSS Sliding Doors</h4>
+<p>An updated <a href="http://www.filamentgroup.com/lab/update_styling_the_button_element_with_css_sliding_doors_now_with_image_spr/">tutorial</a> on sliding doors buttons that now includes creating them with CSS image sprites. It&#8217;s also been simplified to work with a single block of CSS in all the major browsers (including IE 6-8). The markup is simple and straight-forward and the end result is perfect.</p>
+<p class="showcase"><a href="http://www.filamentgroup.com/lab/update_styling_the_button_element_with_css_sliding_doors_now_with_image_spr/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/stylingbuttonelementsliding.jpg" height="128" width="480" /></a></p>
+<h4>Styling Buttons to Look Like Links</h4>
+<p>Sometimes you have to use a button (like with forms), but realize your design would look so much better with just a simple text link. This <a href="http://natbat.net/2009/Jun/10/styling-buttons-as-links/">tutorial</a> gives a complete overview of how to make your buttons look like text links using CSS. </p>
+<p class="showcase"><a href="http://natbat.net/2009/Jun/10/styling-buttons-as-links/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/stylingbuttonsaslinks.jpg" height="193" width="480" /></a></p>
+<h4>Simple, Scalable CSS Based Breadcrumbs</h4>
+<p>Breadcrumbs can be a great addition to your site&#8217;s navigation and can really improve your site&#8217;s usability. This <a href="http://veerle.duoh.com/blog/comments/simple_scalable_css_based_breadcrumbs/">tutorial</a> shows you how to create breadcrumbs with CSS. The code used is simple (the HTML portion is just an unordered list) and there are only six CSS styles defined.</p>
+<p class="showcase"><a href="http://veerle.duoh.com/blog/comments/simple_scalable_css_based_breadcrumbs/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/simplescalablecssbreadcrumb.jpg" width="480" height="54" /></a></p>
+<h4>Recreating the Button</h4>
+<p>This <a href="http://stopdesign.com/archive/2009/02/04/recreating-the-button.html">article</a> covers how to make a button that look very similar to regular HTML input buttons but can handle multiple types of interaction (like dropdowns or toggle functions). These buttons were originally developed at Google and are skinnable with just a few lines of CSS. The buttons created are entirely CSS-based, including the gradient background.</p>
+<p class="showcase"><a href="http://stopdesign.com/archive/2009/02/04/recreating-the-button.html"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/recreatingthebutton.jpg" height="317" width="480" /></a></p>
+<h4>List of 10+ Usability-Conscious Link Styles</h4>
+<p>This <a href="http://code.fecklessmind.com/links-hover-effects/">page</a> offers a good overview of different effects you can use for links, including color and underline, backgrounds, and animations. It&#8217;s a good starting place if you&#8217;re trying to figure out exactly how your links should look and act to make them more user-friendly.</p>
+<p class="showcase"><a href="http://code.fecklessmind.com/links-hover-effects/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/listof10usabilityconsciousl.jpg" height="309" width="480" /></a></p>
+<h4>Create Vimeo-Like Top Navigation</h4>
+<p>Here&#8217;s a <a href="http://www.jankoatwarpspeed.com/post/2009/01/19/Create-Vimeo-like-top-navigation.aspx">tutorial</a> to create a drop-down top navigation bar similar to the one <a href="http://www.vimeo.com">Vimeo.com</a> uses. It&#8217;s all done with images, CSS and HTML and isn&#8217;t particularly difficult, though it is a bit complex. It&#8217;s explained really well, with images illustrating the structure and very well-written CSS.</p>
+<p class="showcase"><a href="http://www.jankoatwarpspeed.com/post/2009/01/19/Create-Vimeo-like-top-navigation.aspx"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/createvimeoliketopnav.jpg" width="480" height="195" /></a></p>
+<h4>Beautifully Horizontal Centered Menus/Tabs/List</h4>
+<p>This <a href="http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support">tutorial</a> explains how to create cross-browser compatible, centered menus or other items in CSS with no hacks and no JavaScript It&#8217;s compatible with liquid layouts, too. Not only does it give the code to achieve the effect, but it also fully explains exactly how and why it works.</p>
+<h3>4. Typography</h3>
+<p>Here are a few tutorials and tricks for creating advanced typographic styles using CSS. There&#8217;s everything from line-wrap functions to faux anti-aliasing to adding gradients and shadows.</p>
+<h4>Wrapping Text Inside Pre Tags</h4>
+<p><a href="http://www.longren.org/2006/09/27/wrapping-text-inside-pre-tags/">This tutorial</a> shows how to wrap text within pre html tags. It&#8217;s useful for displaying code on your site, especially when lines of code are quite long and end up breaking your site&#8217;s layout (especially in IE). It&#8217;s a relatively simple and there are a few different options presented.</p>
+<p class="showcase"><a href="http://www.longren.org/2006/09/27/wrapping-text-inside-pre-tags/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/wrappingtextinpretags.jpg" height="181" width="480" /></a></p>
+<h4>Make Cool and Clever Text Effects with CSS Text-Shadow</h4>
+<p>Creating text effects without the use of images is a big advantage in terms of both file size and the time required for maintenance. This <a href="http://www.kremalicious.com/2008/04/make-cool-and-clever-text-effects-with-css-text-shadow/">tutorial</a> shows how to take advantage of the text-shadow property in CSS to style your text. While this effect doesn&#8217;t work in IE, it does in most other browsers. And it looks incredibly cool if done well (I&#8217;m a big fan of the &#8220;milky text&#8221; example).</p>
+<p class="showcase"><a href="http://www.kremalicious.com/2008/04/make-cool-and-clever-text-effects-with-css-text-shadow/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/coolandclevertexteffectscss.jpg" width="480" height="190" /></a></p>
+<h4>Safari&#8217;s Text-Shadowing Anti-Aliasing CSS Hack</h4>
+<p>This <a href="http://sam.brown.tc/entry/348/safaris-text-shadow-anti-aliasing-css-hack">tutorial</a> shows how to use the text-shadow CSS property to create an anti-aliasing effect on your text. It only works in browsers that support text-shadow (so not IE), but the look is pretty awesome. It can definitely make text more readable, just don&#8217;t overdo it or you end up with text that&#8217;s blurry.</p>
+<p class="showcase"><a href="http://sam.brown.tc/entry/348/safaris-text-shadow-anti-aliasing-css-hack"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/safaristextshadowantialiasi.jpg" width="480" height="165" /></a></p>
+<h4>Safari&#8217;s Text-Shadowing Anti-Aliasing CSS Hack Revision</h4>
+<p>This is a <a href="http://www.komodomedia.com/blog/2009/03/safari-text-shadow-anti-aliasing-css-hack/">revised</a> version of the technique above to create a slightly different anti-aliasing effect, especially useful for light text on dark backgrounds. It uses an extremely transparent black background to force Safari to render the text more legibly.</p>
+<p class="showcase"><a href="http://www.komodomedia.com/blog/2009/03/safari-text-shadow-anti-aliasing-css-hack/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/safaritextshadowantialiasin.jpg" height="346" width="480" /></a></p>
+<h4>Snazzy Pullquotes for Your Blog</h4>
+<p>If you have a blog or other site that&#8217;s text-heavy, using pull quotes to highlight important bits can look really awesome while also making your content more scannable. This <a href="http://www.pearsonified.com/2006/09/snazzy_pullquotes_for_your_blo.php">tutorial</a> shows how to format those pull quotes with CSS. It shows how to create both left and right aligned pull quotes while also preserving your regular blockquote style.</p>
+<p class="showcase"><a href="http://www.pearsonified.com/2006/09/snazzy_pullquotes_for_your_blo.php"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/snazzypullquotesforyourblog.jpg" height="218" width="480" /></a></p>
+<h4>Codename Rainbows</h4>
+<p>Here&#8217;s a <a href="http://labs.dragoninteractive.com/rainbows.php">technique</a> for creating two-color gradients for text using a combination of JavaScript and CSS. It also works to apply shadows and highlights to text. The possibilities for the use of this technique are pretty endless. Of course, this is also one of those things where a little bit goes a long way (ie, limit gradients to your headers, titles, and other text you want to stand out&amp;mdash;not your site&#8217;s body copy).</p>
+<p class="showcase"><a href="http://labs.dragoninteractive.com/rainbows.php"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/codenamerainbows.jpg" height="357" width="480" /></a></p>
+<h4>Build Better CSS Font Stacks</h4>
+<p>This <a href="http://www.codestyle.org/css/font-family/BuildBetterCSSFontStacks.shtml">article</a> gives some great guidelines for creating better CSS font stacks. It includes information on the most common font stacks currently used and then goes on to cover Tuck&#8217;s Definitive Font Stacks and Ford&#8217;s Better Font Stacks. It&#8217;s a great resource when you&#8217;re determining a site&#8217;s typography, with the information presented in a very scannable, well-organized format.</p>
+<p class="showcase"><a href="http://www.codestyle.org/css/font-family/BuildBetterCSSFontStacks.shtml"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/buildbettercssfontstacks.jpg" width="480" height="157" /></a></p>
+<h4>CSS3 Embedding a Font Face</h4>
+<p>Here&#8217;s a great <a href="http://www.zenelements.co.uk/blog/css3-embed-font-face/">tutorial</a> on how to embed fonts using CSS3. While it&#8217;s still not widely supported, this technique makes it much easier to embed special fonts into a site without having to resort to images.</p>
+<p class="showcase"><a href="http://www.zenelements.co.uk/blog/css3-embed-font-face/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/css3embedafontface.jpg" height="119" width="480" /></a></p>
+<h4>CSS Gradient Text Effect</h4>
+<p>This little <a href="http://www.webdesignerwall.com/tutorials/css-gradient-text-effect/">trick</a> makes it easy to create gradient text by applying a 1 pixel gradient PNG to it. It&#8217;s a quick and easy way to create gradient text pretty much anywhere on your site. There&#8217;s even a fix to make it work in IE6 included.</p>
+<p class="showcase"><a href="http://www.webdesignerwall.com/tutorials/css-gradient-text-effect/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/cssgradienttexteffect.jpg" height="268" width="480" /></a></p>
+<h3>5. Other Cool Techniques, Tips, and Tricks</h3>
+<p>Below are a ton of other techniques and tricks you can use to really make your CSS stand out.</p>
+<h4>3D Cube Using CSS Transformations</h4>
+<p>This is probably one of the coolest CSS techniques I&#8217;ve seen. <a href="http://www.fofronline.com/2009-04/3d-cube-using-css-transformations/">This tutorial</a> shows how to build a 3D cube with text or other content on each side of the cube. It does it entirely with CSS; there&#8217;s no canvas, SVG, imagery, or JavaScript. There&#8217;s even instructions for creating multiple shaded cubes on a single page. The only real drawback is that it&#8217;s only supported in recent WebKit and Gecko browsers. </p>
+<p class="showcase"><a href="http://www.fofronline.com/2009-04/3d-cube-using-css-transformations/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/3dcubeusingcsstransformatio.jpg" width="480" height="296" /></a></p>
+<h4>Nine Ways to Obfuscate E-mail addresses compared</h4>
+<p>This <a href="http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/">article</a> gives two different methods for obfuscating email addresses with CSS. One involves using the display:none attribute while the other involves reversing the code. Both supposedly cut the amount of spam received to zero.</p>
+<p class="showcase"><a href="http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/waystoobfuscateemailaddress.jpg" height="328" width="480" /></a></p>
+<h4>Forms Markup and CSS - Revisited</h4>
+<p>Here is a <a href="http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/">CSS template</a> for form styling. The markup of the form is based on the Accessible Forms Markup from Derek Featherstone. The template is semantically correct, flexible and accessible.</p>
+<p class="showcase"><a href="http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/formsmarkupandcssrevisited.jpg" height="250" width="480" /></a></p>
+<h4>iPhone CSS</h4>
+<p>A very short and simple <a href="http://squaregirl.com/blog/2009/6/1/iphone-css.html">tutorial</a> on how to make certain elements of you CSS render differently on the iPhone. It&#8217;s surprisingly simple and easy to implement.</p>
+<p class="showcase"><a href="http://squaregirl.com/blog/2009/6/1/iphone-css.html"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/iphonecss.jpg" height="299" width="480" /></a></p>
+<h4>Improving Your Process: Faster Front End Development</h4>
+<p>While <a href="http://mondaybynoon.com/2009/06/15/improving-your-process-faster-front-end-development/">this post</a> offers plenty of information on things other than CSS, it also offers some great advice for improving your efficiency with CSS: mainly, write your CSS in blocks. This technique is usually done progressively as you get used to coding in this manner. The steps are simple, though, and it&#8217;s sure to make you a much faster designer.</p>
+<p class="showcase"><a href="http://mondaybynoon.com/2009/06/15/improving-your-process-faster-front-end-development/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/improvingyourprocessfasterf.jpg" height="113" width="480" /></a></p>
+<h4>Image-Free CSS Tooltip Pointers - A Use for Polygonal CSS?</h4>
+<p>This <a href="http://www.filamentgroup.com/lab/image_free_css_tooltip_pointers_a_use_for_polygonal_css/">tutorial</a> explains how to create triangles (to be used for pointers) using CSS, without the need for any images. The end result is great, though it only works for single-color images. The CSS used is incredibly simple while still being really versatile. You can create a triangle of almost any size using just a single div.</p>
+<p class="showcase"><a href="http://www.filamentgroup.com/lab/image_free_css_tooltip_pointers_a_use_for_polygonal_css/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/imagefreecsstooltippointers.jpg" height="80" width="480" /></a></p>
+<h4>How I Implemented My Cookie-Based Switcher</h4>
+<p>While not strictly a CSS trick, this <a href="http://www.christianmontoya.com/2007/02/04/how-i-implemented-my-cookie-based-switcher/">post</a> shows how to create a cookie-based CSS theme switcher for WordPress. It allows users to choose to use a different theme when they visit the blog while allowing new users to see a nice, simple, easy-to-read theme that puts the primary focus on the content.</p>
+<p class="showcase"><a href="http://www.christianmontoya.com/2007/02/04/how-i-implemented-my-cookie-based-switcher/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/howiimplementedmycookiebase.jpg" height="289" width="480" /></a></p>
+<h4>CSS Swap Hover Effect</h4>
+<p>This great <a href="http://min.frexy.com/article/css_swap_hover_effect/">technique</a> will replace any image with another image when you hover over it. The tutorial shows it applied to a portfolio site, but the possibilities are endless. It&#8217;s very slick and cross-browser compatible (though IE6 does require a bit of a workaround, as usual).</p>
+<p class="showcase"><a href="http://min.frexy.com/article/css_swap_hover_effect/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/cssswaphovereffect.jpg" height="172" width="480" /></a></p>
+<h4>CSS Stacked Bar Graphs</h4>
+<p>Here&#8217;s a <a href="http://www.thewojogroup.com/2008/12/css-stacked-bar-graphs/">tutorial</a> for creating stacked bar graphs using CSS and some images. It&#8217;s a pretty in-depth process, but the result looks fantastic.</p>
+<p class="showcase"><a href="http://www.thewojogroup.com/2008/12/css-stacked-bar-graphs/"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/cssstackedbargraphs.jpg" height="408" width="480" /></a></p>
+<h4>Changing HTML Images on Hover / A Quick CSS Trick</h4>
+<p>Here&#8217;s a quick and easy CSS <a href="http://www.onderhond.com/blog/work/changing-html-images-on-hover">technique</a> for swapping out images on hover. It&#8217;s pure CSS, no JavaScript required. The biggest issue this technique solves is that when the page is printed, the base image is the only one that shows up.</p>
+<p class="showcase"><a href="http://www.onderhond.com/blog/work/changing-html-images-on-hover"><img alt="Screenshot" src="http://media1.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/changinghtmlimagesonhover.jpg" height="281" width="480" /></a></p>
+<h4>10 Properties that Were Impossible to Implement in IE6</h4>
+<p>This <a href="http://www.productivedreams.com/properties-that-were-impossible-to-implement-in-ie6/">collection</a> of CSS tricks shows how to implement a number of styles that were supposedly impossible in Internet Explorer 6. It includes tricks for opacity, fixed positions, and text shadow, among others.</p>
+<p class="showcase"><a href="http://www.productivedreams.com/properties-that-were-impossible-to-implement-in-ie6/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/propertiesimpossibletoimple.jpg" height="359" width="480" /></a></p>
+<h4>10 Challenging But Awesome CSS Techniques</h4>
+<p>Sometimes the coolest things just take a bit more effort. This collection of <a href="http://net.tutsplus.com/tutorials/html-css-techniques/10-challenging-but-awesome-css-techniques/">tutorials</a> covers ten different CSS techniques that aren&#8217;t exactly easy to achieve, but the end results are well worth the extra effort. Techniques include pull quotes, dynamic variables, and style changes based on the time of day or even the weather, among other awesome examples.</p>
+<p class="showcase"><a href="http://net.tutsplus.com/tutorials/html-css-techniques/10-challenging-but-awesome-css-techniques/"><img alt="Screenshot" src="http://media2.smashingmagazine.com/wp-content/uploads/images/fresh-css-techniques/10challengingbutawesomecsst.jpg" height="197" width="480" /></a></p>
+<h3>Further Resources</h3>
+<ul>
+<li><a href="http://www.noupe.com/css3/css3-exciting-functions-and-features-30-useful-tutorials.html">CSS3 Exciting Functions and Features: 30+ Useful Tutorials</a> from Noupe<br />Covers more than 30 new features and functions CSS3 is capable of.</li>
+<li><a href="http://www.gabrielweinberg.com/blog/2009/06/a-harsh-css-environment-for-testing-widgets.html">A Harsh CSS Environment for Testing Widgets</a><br />This stylesheet creates an incredibly harsh environment for testing your widgets. If it looks okay here, it will likely look okay anywhere.</li>
+<li><a href="http://speckyboy.com/2009/06/08/24-css-in-some-cases-with-jquery-navigation-and-menu-tutorials/">24 CSS (in some cases with jQuery) Navigation and Menu Tutorials</a><br />A huge list of awesome navigation and menu examples, with links to the tutorials.</li>
+<li><a href="http://blog.themeforest.net/general/15-css-tricks-that-must-be-learned/">15 CSS Tricks That Must Be Learned</a><br />Covers a variety of techniques, from fixing PNG transparency in IE6 to using CSS to fight spam.</li>
+</ul>
+<h4>About the author</h4>
+<p><em>Cameron Chapman is a professional Web and graphic designer with over 6 years of experience. She also writes for a number of blogs, including her own, <a href="http://cameronchapman.com">Cameron Chapman On Writing</a>. She&#8217;s also the author of the forthcoming book, <a href="http://internetfamous.com">Internet Famous</a>.</em></p>
+
+<!-- google_ad_section_end -->
+<hr />
+
+<p><small>© Cameron Chapman for <a href="http://www.smashingmagazine.com">Smashing Magazine</a>, 2009. |
+<a href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/">Permalink</a> | 
+<a href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/#comments">67 comments</a> | 
+<a title="Bookmark in del.icio.us" href="http://del.icio.us/post?url=http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/&title=50 New CSS Techniques For Your Next Web Design">Add to del.icio.us</a> | <a title="Bookmark in Digg" href="http://digg.com/submit?phase=2&url=http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/">Digg this</a> | <a title="Stumble on StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/">Stumble on StumbleUpon!</a> | <a title="Tweet us!" href="http://twitter.com/home?status=@tweetmeme%20@smashingmag%20Reading%20'50 New CSS Techniques For Your Next Web Design' http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/">Tweet it!</a> | <a title="Bookmark in Reddit" href="http://reddit.com/submit?url=http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/">Submit to Reddit</a> | <a href="http://forum.smashingmagazine.com/">Forum Smashing Magazine</a>
+
+<br/>
+Post tags: <a href="http://www.smashingmagazine.com/tag/css/" rel="tag">CSS</a>, <a href="http://www.smashingmagazine.com/tag/techniques/" rel="tag">techniques</a>, <a href="http://www.smashingmagazine.com/tag/useful/" rel="tag">useful</a><br/>
+</small></p>]]></content>
+		<link rel="replies" type="text/html" href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/#comments" thr:count="67"/>
+		<link rel="replies" type="application/atom+xml" href="http://www.smashingmagazine.com/2009/07/20/50-new-css-techniques-for-your-next-web-design/feed/atom/" thr:count="67"/>
+		<thr:total>67</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Leland Fiegel</name>
+					</author>
+		<title type="html"><![CDATA[5 Useful And Creative Ways To Use WordPress Widgets]]></title>
+		<link rel="alternate" type="text/html" href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/" />
+		<id>http://www.smashingmagazine.com/?p=7426</id>
+		<updated>2009-07-14T23:14:24Z</updated>
+		<published>2009-07-14T23:12:31Z</published>
+		<category scheme="http://www.smashingmagazine.com" term="Developer&#039;s Toolbox" /><category scheme="http://www.smashingmagazine.com" term="widgets" /><category scheme="http://www.smashingmagazine.com" term="wordpress" />		<summary type="html"><![CDATA[<table width="450"><tr><td width="450"><div style="width:450px;">
+     <img src="http://creatives.commindo-media.de/static/smashing-magazine-advertisement.gif" alt="" border="0" /><br />
+     <a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=56" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=56" border="0" alt="" /></a>&nbsp;<a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=63" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=63" border="0" alt="" /></a>
+   </div></td></tr></table> <!-- <img src="http://www.smashingmagazine.com/images/post-pictures/wp2.jpg" /> --><p>If you've been reading some of the previous WordPress-related articles here on Smashing Magazine, you'll know that WordPress is much more than a blogging platform. It can be used as a CMS, too. And WordPress widgets are a powerful tool in your <strong>WordPress development arsenal</strong>.</p>
+
+<p><a href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/"><img src="http://88.198.60.17/images/wordpress-widgets/cal.jpg" alt="Screenshot" width="357" height="250" /></a></p> 
+
+<p>When you think of <strong>WordPress widgets</strong>, you may think they're just a way to rearrange various items in your blog's sidebar without touching any code. Sure, that's nice and all, but that's really just the tip of the iceberg of all the things WordPress widgets can do.</p>]]></summary>
+		<content type="html" xml:base="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/"><![CDATA[
+<!-- google_ad_section_start -->
+<table width="450">
+<tr>
+<td width="450">
+<div style="width:450px;">
+     <img src="http://creatives.commindo-media.de/static/smashing-magazine-advertisement.gif" alt="" border="0" /><br />
+     <a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=56" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=56" border="0" alt="" /></a>&nbsp;<a href="http://creatives.commindo-media.de/www/delivery/ck.php?zoneid=63" target="_blank"><img src="http://creatives.commindo-media.de/www/delivery/avw.php?zoneid=63" border="0" alt="" /></a>
+   </div>
+</td>
+</tr>
+</table>
+<p>If you&#8217;ve been reading some of the previous WordPress-related articles here on Smashing Magazine, you&#8217;ll know that WordPress is much more than a blogging platform. It can be used as a CMS, too. And WordPress widgets are a powerful tool in your <strong>WordPress development arsenal</strong>.</p>
+<p>When you think of <strong>WordPress widgets</strong>, you may think they&#8217;re just a way to rearrange various items in your blog&#8217;s sidebar without touching any code. Sure, that&#8217;s nice and all, but that&#8217;s really just the tip of the iceberg of all the things WordPress widgets can do.</p>
+<p>You may be interested in the following related posts:</p>
+<ul>
+<li><a href="http://www.smashingmagazine.com/2009/07/02/power-tips-for-wordpress-template-developers/">Power Tips For WordPress Template Developers</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/06/10/10-useful-wordpress-loop-hacks/">10 Useful WordPress Loop Hacks</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/05/13/10-custom-fields-hacks-for-wordpress/">Custom Field Hacks For WordPress</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/03/04/15-useful-twitter-plugins-and-hacks-for-wordpress/">15 Useful Twitter Hacks and Plugins For WordPress</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/02/02/mastering-wordpress-shortcodes/">Mastering WordPress Shortcuts</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/05/18/100-amazing-free-wordpress-themes-for-2009/">100 Amazing Free WordPress Themes For 2009</a></li>
+</ul>
+<h3>1. Multiple Widget-Ready Areas</h3>
+<p><img src="http://media1.smashingmagazine.com/images/wordpress-widgets/2(1).jpg" alt="Screenshot" width="357" height="250" /></p>
+<p>A widgetized theme has come to be expected by theme users and developers alike. Nowadays, however, just one widgetized area doesn&#8217;t cut it. The first step to using widgets on your WordPress website is to <strong>widgetize your theme</strong>, and that&#8217;s really not that hard if you have the right code in place.</p>
+<h4>Register the Widget Areas</h4>
+<p>To have multiple widget-ready areas, the first thing to do is register the widget areas in the <em>functions.php</em> file of your WordPress theme. Let&#8217;s say you have a three-column theme, and you want to have two different sidebars on the left and right side:</p>
+<pre name="code" class="php">&lt;?php
+	register_sidebar( array(
+		'name' =&gt; 'left-sidebar',
+		'id' =&gt; 'left-sidebar',
+		'before_widget' =&gt; '&lt;div id=&quot;%1$s&quot; class=&quot;%2$s widget&quot;&gt;',
+		'after_widget' =&gt; '&lt;/div&gt;',
+		'before_title' =&gt; '&lt;h3 class=&quot;widget-title&quot;&gt;',
+		'after_title' =&gt; '&lt;/h3&gt;'
+	) );
+	register_sidebar( array(
+		'name' =&gt; 'right-sidebar',
+		'id' =&gt; 'right-sidebar',
+		'before_widget' =&gt; '&lt;div id=&quot;%1$s&quot; class=&quot;%2$s widget&quot;&gt;',
+		'after_widget' =&gt; '&lt;/div&gt;',
+		'before_title' =&gt; '&lt;h3 class=&quot;widget-title&quot;&gt;',
+		'after_title' =&gt; '&lt;/h3&gt;'
+	) );
+?&gt;</pre>
+<h4>Activate the Widget Areas</h4>
+<p>The next step is to put the dynamic sidebar code in the actual sidebar files. Depending on your theme, this could be located in a <em>sidebar.php</em> file, or elsewhere.  Here&#8217;s the code to use:</p>
+<pre name="code" class="php">&lt;?php if (!dynamic_sidebar(&quot;left-sidebar&quot;) ) : ?&gt;
+Default left sidebar stuff here…
+&lt;?php endif; ?&gt;</pre>
+<pre name="code" class="php">&lt;?php if (!dynamic_sidebar(&quot;right-sidebar&quot;) ) : ?&gt;
+Default right sidebar stuff here…
+&lt;?php endif; ?&gt;</pre>
+<p>The code between the PHP tags will be displayed if no widgets are currently used in the relevant widget area. For example, if no widgets are used in the &#8220;left-sidebar&#8221; widget, then &#8220;Default left sidebar stuff here…&#8221; would be displayed instead.</p>
+<p><strong>Sources:</strong></p>
+<ul>
+<li><a href="http://www.themelab.com/2008/04/18/see-how-easy-it-is-to-widgetize-wordpress-themes/">See How Easy It Is To Widgetize WordPress Themes</a></li>
+<li><a href="http://automattic.com/code/widgets/themes/">Widgetizing WordPress Themes</a> (Automattic)</li>
+</ul>
+<h3>2. Widget Logic</h3>
+<p><img src="http://media2.smashingmagazine.com/images/wordpress-widgets/cal.jpg" alt="Screenshot" width="357" height="250" /></p>
+<p>Sometimes you may not want the same widgets to appear the same way on every single page of your blog.  This is where the <a href="http://wordpress.org/extend/plugins/widget-logic/">Widget Logic</a> plug-in comes in handy.</p>
+<p>After the plug-in is installed, a new &#8220;Widget Logic&#8221; input box is displayed in the options box of every widget you use.  In this box, you can type a series of <strong>WordPress conditional tags</strong> to control where exactly the widget is displayed.</p>
+<p>In the screenshot above, the Calendar widget is set to display only on the page called &#8220;Evil.&#8221; You can use many more conditional tags as well.</p>
+<h4>Examples</h4>
+<ul>
+<li>Display only on the home page: <code>is_home()</code></li>
+<li>Display only on individual posts: <code>is_single()</code></li>
+<li>Display only on pages: <code>is_page()</code></li>
+<li>Display on archive pages (category, tag, etc.): <code>is_archive()</code></li>
+<li>Display on search results pages: <code>is_search()</code></li>
+<li>Display on all pages <em>except</em> the home page: <code>!is_home()</code></li>
+<li>Display on &#8220;Advertise&#8221; or &#8220;Contact&#8221; page: <code>is_page('advertise') || is_page('contact')</code>
+</ul>
+<p>Simply type something similar in your own Widget Logic boxes, depending on where you want the widgets to display.</p>
+<p><strong>Sources:</strong></p>
+<ul>
+<li><a href="http://www.themelab.com/2008/04/14/the-ultimate-guide-to-wordpress-conditional-tags/">The Ultimate Guide to WordPress Conditional Tags</a></li>
+<li><a href="http://codex.wordpress.org/Conditional_Tags">WordPress Conditional Tags</a> (WordPress Codex)</li>
+</ul>
+<h3>3. Query Posts</h3>
+<p><img src="http://media2.smashingmagazine.com/images/wordpress-widgets/que.jpg" alt="Screenshot" width="357" height="250" /></p>
+<p>For those who don&#8217;t know, the <code><strong>query_posts</strong></code> template tag is a powerful WordPress function that you can use to control how different posts and pages show up in the loop.</p>
+<p>However, if you&#8217;d rather not mess around with more PHP code than is necessary but still want to take advantage of the <code>query_posts</code> tag, you can use the <a href="http://wordpress.org/extend/plugins/query-posts/">Query Posts</a> widget to display WordPress content in almost any way you can think of.</p>
+<p>After installing and activating the plug-in, you will have a new &#8220;Query Posts&#8221; widget available in the WordPress widgets menu.</p>
+<h4>What It Can Do</h4>
+<ul>
+<li>Display posts by tag, category, author, time/date or custom field keys/values,</li>
+<li>Display however many number of posts you want,</li>
+<li>Order posts by date published, title or ID in either ascending or descending order,</li>
+<li>Display posts with full content, as excerpts or in a list,</li>
+<li>Show WordPress pages.</li>
+</ul>
+<p><strong>Source:</strong></p>
+<ul>
+<li><a href="http://justintadlock.com/archives/2009/03/15/query-posts-widget-wordpress-plugin">Query Posts Widget: WordPress Plug-In</a></li>
+</ul>
+<h3>4. 404 Templates</h3>
+<p><img src="http://media1.smashingmagazine.com/images/wordpress-widgets/2_2(1).jpg" alt="Screenshot" width="357" height="250" /></p>
+<p>A lot of WordPress themes out there, including the default WordPress theme, don&#8217;t offer anything useful in their 404 templates. For example, if you land on a 404 page of a WordPress website that uses the default theme, you&#8217;ll be greeted with a message that says &#8220;Error 404 - Not Found,&#8221; and that&#8217;s it.</p>
+<p>There are plenty of WordPress widgets you can use to spice up your 404 page and make it more useful to visitors who are trying to find content. The widgets &#8220;Recent Posts,&#8221; &#8220;Categories&#8221; and &#8220;Archives&#8221; come to mind.</p>
+<h4>The Code</h4>
+<p>The first step is to register the widget area in WordPress. To do this, open up your theme&#8217;s <em>functions.php</em> file, and put the following code in it:</p>
+<pre name="code" class="php">&lt;?php
+	register_sidebar( array(
+		'name' =&gt; '404',
+		'id' =&gt; '404',
+		'before_widget' =&gt; '&lt;div id=&quot;%1$s&quot; class=&quot;%2$s widget&quot;&gt;',
+		'after_widget' =&gt; '&lt;/div&gt;',
+		'before_title' =&gt; '&lt;h3 class=&quot;widget-title&quot;&gt;',
+		'after_title' =&gt; '&lt;/h3&gt;'
+	) );
+?&gt;</pre>
+<p>Now that the widget is registered, you&#8217;ll have to edit your theme&#8217;s <em>404.php</em> file and add the following code:</p>
+<pre name="code" class="php">&lt;?php dynamic_sidebar( '404' ); ?&gt;</pre>
+<p>That&#8217;s it. You can now place any widgets you&#8217;d like in your &#8220;404&#8243; widget, and they will be displayed every time a visitor lands on a 404 page. Load it up with things like a search box, recent posts, category listings or maybe a few Query Post lists.</p>
+<p><strong>Source:</strong></p>
+<ul>
+<li><a href="http://justintadlock.com/archives/2009/05/13/customize-your-404-page-from-the-wordpress-admin">Customize your 404 page from the WordPress Admin</a></li>
+</ul>
+<h3>5. Insert Ads Between Posts</h3>
+<p><img src="http://media1.smashingmagazine.com/images/wordpress-widgets/3(2).jpg" alt="Screenshot" width="357" height="250" /></p>
+<p>You can code your theme to insert a widget in between a certain number of posts. Some people use this to insert advertising, but the sky is the limit when it comes to widgets.</p>
+<h4>The Code</h4>
+<p>As we did when widgetizing the 404 template, the first step to setting this up is to register the widget area for the index insert. Open up your <em>functions.php</em> file again and insert this similar code:</p>
+<pre name="code" class="php">&lt;?php
+	register_sidebar( array(
+		'name' =&gt; 'index-insert',
+		'id' =&gt; 'index-insert',
+		'before_widget' =&gt; '&lt;div id=&quot;%1$s&quot; class=&quot;%2$s widget&quot;&gt;',
+		'after_widget' =&gt; '&lt;/div&gt;',
+		'before_title' =&gt; '&lt;h3 class=&quot;widget-title&quot;&gt;',
+		'after_title' =&gt; '&lt;/h3&gt;'
+	) );
+?&gt;</pre>
+<p>To set it up on your main index page, you&#8217;ll need to open up the <em>index.php</em> file of your theme, locate the &#8220;endwhile&#8221; near the end and put the following code directly above it, so that it looks like this.</p>
+<pre name="code" class="php">&lt;?php if ($count==2) { ?&gt;
+&lt;?php dynamic_sidebar('index-insert') ?&gt;
+&lt;?php } ?&gt;
+&lt;?php $count = $count + 1; ?&gt;
+&lt;?php endwhile; ?&gt;</pre>
+<p>The above code will insert the &#8220;index-insert&#8221; widget area right after the second post. You can change the <code>$count==2</code> number to something else, according to the post you&#8217;d like the widget area to be displayed after.</p>
+<p>If you want ads to show up in between your archive listings, such as on category or tag pages, you may have to insert the above code in other files, including <em>archive.php</em>, <em>category.php</em> and <em>tag.php</em>. You can even control which ads are displayed on which pages by using conditional tags, such as <code>is_archive()</code>, <code>is_category()</code> and <code>is_tag()</code>, in the Widget Logic plug-in.</p>
+<p><strong>Source:</strong></p>
+<ul>
+<li><a href="http://themeshaper.com/thematic/">Thematic WordPress Theme</a></li>
+</ul>
+<h3>More Widget Resources</h3>
+<ul>
+<li><a href="http://www.themelab.com/2009/04/25/add-a-widgetized-footer-to-your-wordpress-theme/">Add a Widgetized Footer to Your WordPress Theme</a> <br />A tutorial that teaches you how to code your own widgetized footer, including the HTML, CSS and WordPress code needed.</li>
+<li><a href="http://wordpressmodder.org/query-posts-widget-plugin-widgetized-page-template-widget-logic-wordpress-gold-366.html">Query Posts Widget Plug-In + Widgetized Page Template + Widget Logic = WordPress Gold</a> <br />A WordPress video tutorial that goes over the Query Posts plug-in, widgetized page templates and the Widget Logic plug-in.</li>
+<li><a href="http://codex.wordpress.org/Plugins/WordPress_Widgets">List of WordPress Widgets</a> <br />A list of WordPress widgets from the Codex, as well as several other widget-related resources.</li>
+</ul>
+<h3>Related posts</h3>
+<p>You may be interested in the following related posts:</p>
+<ul>
+<li><a href="http://www.smashingmagazine.com/2009/07/02/power-tips-for-wordpress-template-developers/">Power Tips For WordPress Template Developers</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/06/10/10-useful-wordpress-loop-hacks/">10 Useful WordPress Loop Hacks</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/05/13/10-custom-fields-hacks-for-wordpress/">Custom Field Hacks For WordPress</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/03/04/15-useful-twitter-plugins-and-hacks-for-wordpress/">15 Useful Twitter Hacks and Plugins For WordPress</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/02/02/mastering-wordpress-shortcodes/">Mastering WordPress Shortcuts</a></li>
+<li><a href="http://www.smashingmagazine.com/2009/05/18/100-amazing-free-wordpress-themes-for-2009/">100 Amazing Free WordPress Themes For 2009</a></li>
+</ul>
+<p><em>(al)</em></p>
+
+<!-- google_ad_section_end -->
+<hr />
+
+<p><small>© Leland Fiegel for <a href="http://www.smashingmagazine.com">Smashing Magazine</a>, 2009. |
+<a href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/">Permalink</a> | 
+<a href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/#comments">54 comments</a> | 
+<a title="Bookmark in del.icio.us" href="http://del.icio.us/post?url=http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/&title=5 Useful And Creative Ways To Use WordPress Widgets">Add to del.icio.us</a> | <a title="Bookmark in Digg" href="http://digg.com/submit?phase=2&url=http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/">Digg this</a> | <a title="Stumble on StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/">Stumble on StumbleUpon!</a> | <a title="Tweet us!" href="http://twitter.com/home?status=@tweetmeme%20@smashingmag%20Reading%20'5 Useful And Creative Ways To Use WordPress Widgets' http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/">Tweet it!</a> | <a title="Bookmark in Reddit" href="http://reddit.com/submit?url=http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/">Submit to Reddit</a> | <a href="http://forum.smashingmagazine.com/">Forum Smashing Magazine</a>
+
+<br/>
+Post tags: <a href="http://www.smashingmagazine.com/tag/widgets/" rel="tag">widgets</a>, <a href="http://www.smashingmagazine.com/tag/wordpress/" rel="tag">wordpress</a><br/>
+</small></p>]]></content>
+		<link rel="replies" type="text/html" href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/#comments" thr:count="54"/>
+		<link rel="replies" type="application/atom+xml" href="http://www.smashingmagazine.com/2009/07/14/5-useful-and-creative-ways-to-use-wordpress-widgets/feed/atom/" thr:count="54"/>
+		<thr:total>54</thr:total>
+	</entry>
+	</feed>

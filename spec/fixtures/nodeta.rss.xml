@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" version="2.0">
+
+<channel>
+	<title>Nodeta</title>
+	
+	<link>http://blog.nodeta.fi</link>
+	<description>on Rails</description>
+	<pubDate>Mon, 06 Jul 2009 09:53:54 +0000</pubDate>
+	<generator>http://wordpress.org/?v=2.7.1</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+			<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" href="http://feeds.feedburner.com/Nodeta" type="application/rss+xml" /><item>
+		<title>Announcing Flowdock - Real-time collaboration for teams</title>
+		<link>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/</link>
+		<comments>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/#comments</comments>
+		<pubDate>Sun, 05 Jul 2009 09:25:32 +0000</pubDate>
+		<dc:creator>Karri Saarinen</dc:creator>
+		
+		<category><![CDATA[Flowdock]]></category>
+
+		<category><![CDATA[collaboration]]></category>
+
+		<category><![CDATA[introduction]]></category>
+
+		<category><![CDATA[real-time]]></category>
+
+		<category><![CDATA[team]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=137</guid>
+		<description><![CDATA[ ]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.flowdock.com"><img class="alignright size-full wp-image-133" style="float:right" title="Flowdock" src="http://blog.nodeta.fi/wp-content/uploads/2009/06/flowdock-logo1.png" alt="Flowdock" width="300" height="64" border="0"/></a><br />
+<strong>Today, we are happy announce our next product, Flowdock.</strong></p>
+<p>Flowdock is a real-time collaboration app that lets you work together as a team and talk things over smoothly and easily, all in the web browser.</p>
+<p>What we want is to create a place for your team to share thoughts and work with each other, either formally or more casually over the web without the hassle of installing clients, fiddling with user names or zapping your productivity with annoying interruptions.</p>
+<p>Armed with unobtrusive group messaging and a JavaScript platform for real-time collaborative apps, which we hope to help your team focus on your real goals. Flowdock can be used by just a one team or group inside your company—converting the whole company is not necessary.</p>
+<p>In addition, Flowdock will present a full-fledged API at the disposal of third-party developers, allowing everyone to take advantage of our collaborative platform to the fullest extent.</p>
+<h3>Making web collaboration work</h3>
+<p>We are really excited about how Flowdock could change the process of communicating and working together at the office. Anyone working in a company without an IRC channel knows how hard it is to do even the most basic things like sharing interesting (*cough* youtube) links or figuring out the time and place for a lunch.</p>
+<p>Also, when you&#8217;re drafting an important document, the chances are there are several people to have their say about it. Without a smart version control,  it&#8217;s rather painful. You send the document back and forth and at some point, somebody drops the ball and you’re all confused about which is the most recent version.</p>
+<p>Usually you don&#8217;t know that well what others are doing unless you&#8217;re practicing Scrum, or a similar model with daily meetings. Even in that case you can&#8217;t be sure what others are working on right now, without bugging them about it.</p>
+<div style="float:right; padding:5px 10px;">
+<div id="attachment_136" class="wp-caption alignright" style="width: 250px"><img class="size-full wp-image-136" title="flowdocking" src="http://blog.nodeta.fi/wp-content/uploads/2009/06/flowdocking.jpg" alt="Ville guiding Hannu and Raine through the inner workings of Flowdock" width="240" height="196" /><p class="wp-caption-text">Ville guiding Hannu and Raine through the inner workings of Flowdock</p></div>
+</div>
+<p>Trying to solve these problems for ourselves last fall, we grew tired of the tools available and decided to make our own, starting with research on various Comet technologies, super-scalable message queuing and distribution, asynchronous storage and so on. Needless to say, implementing all this into web environment has not been trivial.</p>
+<p>However, we put our man, Ville Lautanala, to work full-time on the research, and he subsequently started working on a Rails prototype. Now, with the help of the <a href="http://apidock.com">APIdock</a> team we have managed develop a few sprints of alpha versions and at the time of writing, we are using it internally.</p>
+<p>Flowdock will be available in this fall. Right now, you can go to our <a href="http://www.flowdock.com">splash page</a> and show your interest by subscribing to our mailing list. Later on, we&#8217;ll be able to let you know when we are ready to unveil the awesomeness we&#8217;ve been working on for the past year!</p>
+<p>Also, you can subscribe to this blog or follow <a href="http://twitter.com/flowdock">us on twitter</a> to stay tuned on future developments, feature highlights and technical behind-the-scenes information.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Avoiding Rails session race conditions - now with PostgreSQL</title>
+		<link>http://blog.nodeta.fi/2009/03/27/avoiding-rails-session-race-conditions-postgresql/</link>
+		<comments>http://blog.nodeta.fi/2009/03/27/avoiding-rails-session-race-conditions-postgresql/#comments</comments>
+		<pubDate>Fri, 27 Mar 2009 19:04:35 +0000</pubDate>
+		<dc:creator>Otto Hilska</dc:creator>
+		
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[postgresql]]></category>
+
+		<category><![CDATA[session]]></category>
+
+		<category><![CDATA[sql]]></category>
+
+		<category><![CDATA[store]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=87</guid>
+		<description><![CDATA[Long story short: Ruby on Rails session handling does have some concurrency problems. Especially with AJAX requests this is a very potential scenario:
+
+Request 1 loads user session
+Request 2 loads user session
+Request 1 stores something to the session
+Request 2 stores something to the session
+Request 1 writes its session data to the database
+Request 2 writes its session [...]]]></description>
+			<content:encoded><![CDATA[<p>Long story short: Ruby on Rails session handling <a href="http://www.texperts.com/2007/05/01/race-conditions-in-rails-sessions-and-how-to-fix-them/">does have some concurrency problems</a>. Especially with AJAX requests this is a very potential scenario:</p>
+<ol>
+<li>Request 1 loads user session</li>
+<li>Request 2 loads user session</li>
+<li>Request 1 stores something to the session</li>
+<li>Request 2 stores something to the session</li>
+<li>Request 1 writes its session data to the database</li>
+<li>Request 2 writes its session data to the database</li>
+</ol>
+<p>Now, of course whatever request 1 wrote there is pretty much lost. These bugs are hard to find, and in my case the site had been in production use for 18 months before this really became a problem.</p>
+<p>I soon found out that <a href="http://www.spacevatican.org/">Frederick Cheung</a> had already written a plugin called <a href="http://github.com/fcheung/smart_session_store/tree">Smart Session Store</a> to handle these race conditions by locking the session row when needed. However, it didn&#8217;t work with the latest PostgreSQL drivers.</p>
+<p>I&#8217;ve fixed this to work with combinations of the pg/postgers driver and Rails 2.2/2.3 <a href="http://github.com/mutru/smart_session_store/tree/master">in my smart_session_store fork</a>. The tests are also now actually testing something. I&#8217;ve sent a pull request, so everyone should be able to enjoy it soon.</p>
+<p>It&#8217;s really a good practice to somehow handle session concurrency even before it&#8217;s a problem, because these kinds of bugs tend to appear when you least expect it.</p>
+<p>We can test this by adding two actions to our controller. They should both write something to the session, and the other one should <a href="http://apidock.com/ruby/Kernel/sleep">sleep</a> a while to make sure that its changes are likely to be lost.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/03/27/avoiding-rails-session-race-conditions-postgresql/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Search APIdock with Ubiquity</title>
+		<link>http://blog.nodeta.fi/2009/03/20/search-apidock-with-ubiquity/</link>
+		<comments>http://blog.nodeta.fi/2009/03/20/search-apidock-with-ubiquity/#comments</comments>
+		<pubDate>Fri, 20 Mar 2009 08:20:33 +0000</pubDate>
+		<dc:creator>Mikael Roos</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[rspec]]></category>
+
+		<category><![CDATA[Ruby]]></category>
+
+		<category><![CDATA[ubiquity]]></category>
+
+		<category><![CDATA[vim]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=85</guid>
+		<description><![CDATA[The Firefox plugin, Ubiquity, is an awesome extendable Swiss knife command line of the web. The other day I noticed that Jack Dempsey had written a Ubiquity command for searching the Ruby documentation from APIdock. After quick googling, I found out that different people had done the same for Rails and RSpec as well, based [...]]]></description>
+			<content:encoded><![CDATA[<p>The Firefox plugin, <a href="http://ubiquity.mozilla.com/">Ubiquity</a>, is an awesome extendable Swiss knife command line of the web. The other day I noticed that <a href="http://github.com/jackdempsey">Jack Dempsey</a> had written a Ubiquity command for searching the Ruby documentation from APIdock. After quick googling, I found out that <a href="http://github.com/bumi">different</a> <a href="http://github.com/davidwparker">people</a> had done the same for Rails and RSpec as well, based on Jack&#8217;s command. Talk about community effort! Here are links to the Ubiquity commands (you need to have Ubiquity installed):</p>
+<ul>
+<li><a href="http://railslove.com/ubiquity/rails/index.html">Rails</a></li>
+<li><a href="http://gist.github.com/8132">Ruby</a></li>
+<li><a href="http://gist.github.com/9310">RSpec</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/03/20/search-apidock-with-ubiquity/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>APIdock 1.4 with Rails 2.3</title>
+		<link>http://blog.nodeta.fi/2009/03/16/apidock-14-with-rails-23/</link>
+		<comments>http://blog.nodeta.fi/2009/03/16/apidock-14-with-rails-23/#comments</comments>
+		<pubDate>Mon, 16 Mar 2009 19:51:44 +0000</pubDate>
+		<dc:creator>Mikael Roos</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[Rails]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=84</guid>
+		<description><![CDATA[APIdock 1.4 (IRON STEVE) was deployed a few minutes ago. The release consists of mostly bug fixes and some minor stuff.
+The docs for the new Ruby on Rails 2.3.2 with Rack and Metal and all kinds of other awesomeness are being imported as I&#8217;m writing this. Check the new docs here.
+Update: RSpec 1.2 was just imported [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://apidock.com">APIdock</a> 1.4 (IRON STEVE) was deployed a few minutes ago. The release consists of mostly bug fixes and some minor stuff.</p>
+<p>The docs for the new <a href="http://weblog.rubyonrails.org/2009/3/16/rails-2-3-templates-engines-rack-metal-much-more">Ruby on Rails 2.3.2</a> with Rack and Metal and all kinds of other awesomeness are being imported as I&#8217;m writing this. Check the new docs <a href="http://apidock.com/rails">here</a>.</p>
+<p><strong>Update: </strong><a href="http://rspec.info/documentation/changes-rspec.html">RSpec 1.2</a> was just imported as well. <a href="http://apidock.com/rspec">To the docs</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/03/16/apidock-14-with-rails-23/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Stopping your Rails application with Phusion Passenger</title>
+		<link>http://blog.nodeta.fi/2009/03/11/stopping-your-rails-application-with-phusion-passenger/</link>
+		<comments>http://blog.nodeta.fi/2009/03/11/stopping-your-rails-application-with-phusion-passenger/#comments</comments>
+		<pubDate>Wed, 11 Mar 2009 14:38:15 +0000</pubDate>
+		<dc:creator>Otto Hilska</dc:creator>
+		
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[deployment]]></category>
+
+		<category><![CDATA[mod_rails]]></category>
+
+		<category><![CDATA[mod_rewrite]]></category>
+
+		<category><![CDATA[passenger]]></category>
+
+		<category><![CDATA[stop]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=83</guid>
+		<description><![CDATA[I must not be the only one who occasionally wants to stop a Ruby on Rails application. There are long-running and risky database schema migrations and data migrations, and you don&#8217;t want users fiddling the system in the middle of the deployment.
+With a Mongrel-based setup it was easy to set up a 503 (Service unavailable) [...]]]></description>
+			<content:encoded><![CDATA[<p>I must not be the only one who occasionally wants to stop a Ruby on Rails application. There are long-running and risky database schema migrations and data migrations, and you don&#8217;t want users fiddling the system in the middle of the deployment.</p>
+<p>With a Mongrel-based setup it was easy to set up a 503 (Service unavailable) error page and then just shut down all the Mongrels, so that Apache could give users a maintenance page. Using <a href="http://www.modrails.com/">mod_rails</a> (Phusion Passenger), only restart is supported out-of-the-box.</p>
+<p>However, it&#8217;s possible to use mod_rewrite to prevent users from accessing your site during the deployment. Try this in your Apache virtual host configuration file:</p>
+<pre>
+# This option is not needed with Passenger >=2.1.1.
+RailsAllowModRewrite on
+
+ErrorDocument 503 /503.html
+
+RewriteEngine on
+
+RewriteCond %{DOCUMENT_ROOT}/../tmp/stop.txt -f
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /$1 [R=503,L]
+</pre>
+<p>Basically the last three lines mean:</p>
+<ol>
+<li>If there is a <i>tmp/stop.txt</i> file</li>
+<li>and user is requesting a file that does not directly exist in the file system</li>
+<li>then return error 503 and render the appropriate maintenance page</li>
+</ol>
+<p>It doesn&#8217;t actually stop your Rails processes, though. They will die when Passenger times out.</p>
+<p>Now it&#8217;s also easy to incorporate this to your Capistrano configuration:</p>
+<pre>
+namespace :passenger do
+  desc "Restart Passenger"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  desc "Stop Passenger"
+  task :stop, :roles => :app do
+    run "touch #{current_path}/tmp/stop.txt"
+  end
+
+  desc "Start (or un-stop) Passenger"
+  task :start, :roles => :app do
+    run "rm -f #{current_path}/tmp/stop.txt"
+  end
+end
+</pre>
+<p>After this it&#8217;s safe to deploy big new releases without completely taking down your Apache.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/03/11/stopping-your-rails-application-with-phusion-passenger/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>APIdock to be built-in in the Rails Textmate bundle?</title>
+		<link>http://blog.nodeta.fi/2009/03/05/apidock-to-be-built-in-in-the-rails-textmate-bundle/</link>
+		<comments>http://blog.nodeta.fi/2009/03/05/apidock-to-be-built-in-in-the-rails-textmate-bundle/#comments</comments>
+		<pubDate>Thu, 05 Mar 2009 11:05:24 +0000</pubDate>
+		<dc:creator>Mikael Roos</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[drnic]]></category>
+
+		<category><![CDATA[lautis]]></category>
+
+		<category><![CDATA[Textmate]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=81</guid>
+		<description><![CDATA[In addition to all kinds of general Ruby fame, Dr. Nic is the creator and maintainer of the Ruby on Rails Textmate bundle. Now, it seems that just a few hours ago he noticed that our Ville Lautanala aka Lautis had written a few good bugfixes and changes to the bundle. He then went ahead [...]]]></description>
+			<content:encoded><![CDATA[<p>In addition to all kinds of general Ruby fame, <a href="http://drnicwilliams.com/">Dr. Nic</a> is the <span style="text-decoration: line-through;">creator and</span> maintainer of the Ruby on Rails Textmate bundle. Now, it seems that just a few hours ago he noticed that our Ville Lautanala aka <a href="http://github.com/lautis">Lautis</a> had written a few good bugfixes and changes to the bundle. He then went ahead and <a href="http://github.com/drnic/ruby-on-rails-tmbundle/commit/9f8336addeab500c69d30023eddf0a3f92b3e099">merged them to the master branch</a>.  And the real kicker here is, that among those changes was the <a href="http://github.com/drnic/ruby-on-rails-tmbundle/commit/b8c5f160014112a4afa5a90ca92505b1b8ab0bc2">change</a> that adds <a href="http://apidock.com">APIdock</a>-powered documentation macros. Let&#8217;s hope that this change sticks so all Rails codin&#8217; Textmate users will be able to enjoy the rich documentation browsing that APIdock provides.</p>
+<p>Will the <a href="http://github.com/drnic/ruby-tmbundle/tree/master">Ruby bundle</a>, which is also maintained by Dr. Nic, follow next?</p>
+<p><strong>Update:</strong> Origin of the bundle can be changed using following commands:</p>
+<p>% cd ~/Library/Application\ Support/Textmate/Bundles/Ruby\ On\ Rails.tmbundle<br />
+% git remote rm origin<br />
+% git remote add -f -t master -m master origin git://github.com/drnic/ruby-on-rails-tmbundle.git</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/03/05/apidock-to-be-built-in-in-the-rails-textmate-bundle/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>APIdock in Textmate</title>
+		<link>http://blog.nodeta.fi/2009/02/23/apidock-in-textmate/</link>
+		<comments>http://blog.nodeta.fi/2009/02/23/apidock-in-textmate/#comments</comments>
+		<pubDate>Mon, 23 Feb 2009 17:21:16 +0000</pubDate>
+		<dc:creator>Mikael Roos</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[JavaScript]]></category>
+
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[Rails-doc]]></category>
+
+		<category><![CDATA[Ruby]]></category>
+
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=77</guid>
+		<description><![CDATA[
+First came Vim, and next Gaizka added APIdock integration to Emacs. Now perhaps the biggest favorite of most Ruby and Rails developers, myself included: Textmate! Courtesy of one of Nodeta&#8217;s own, Ville Lautanala aka Lautis, you can get the Textmate bundles with APIdock goodness for Ruby and Rails from github with just a couple of [...]]]></description>
+			<content:encoded><![CDATA[<p><a href='http://blog.nodeta.fi/wp-content/uploads/2009/02/textmate-bundle.png'><img src="http://blog.nodeta.fi/wp-content/uploads/2009/02/textmate-bundle-300x114.png" alt="" title="Textmate with APIdock" width="300" height="114" style="float: right; margin: 1em;" /></a></p>
+<p>First came <a href="http://blog.nodeta.fi/2009/02/19/apidock-vim-integration/">Vim</a>, and next <a href="http://github.com/gaizka">Gaizka</a> added <a href="http://github.com/gaizka/misc-scripts/blob/3a60c2cd41ba1e331e4fa6539d0c70b522a64dd4/dot-emacs/rails-apidock.el">APIdock integration to Emacs</a>. Now perhaps the biggest favorite of most Ruby and Rails developers, myself included: Textmate! Courtesy of one of Nodeta&#8217;s own, <a href="http://github.com/lautis">Ville Lautanala aka Lautis</a>, you can get the Textmate bundles with APIdock goodness for <a href="http://github.com/lautis/ruby-tmbundle/tree">Ruby</a> and <a href="http://github.com/lautis/ruby-on-rails-tmbundle/tree">Rails</a> from github with just a couple of simple git commands:<br />
+<code><br />
+% mkdir -p ~/Library/Application\ Support/Textmate/Bundles<br />
+% cd ~/Library/Application\ Support/Textmate/Bundles<br />
+% git clone git://github.com/lautis/ruby-on-rails-tmbundle.git "Ruby on Rails.tmbundle"<br />
+% git clone git://github.com/lautis/ruby-tmbundle.git "Ruby.tmbundle"<br />
+% osascript -e 'tell app "TextMate" to reload bundles'<br />
+</code></p>
+<p>Now, the keyboard shortcut <code>Control+h</code> gets you the page for the current word from APIdock.</p>
+<p><img src="http://blog.nodeta.fi/wp-content/uploads/2009/02/apidock-textmate.png" alt="" title="APIdock Textmate Integration" class="alignnone size-medium wp-image-79" /></p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/02/23/apidock-in-textmate/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Presenting at UraTiKAS, TKK</title>
+		<link>http://blog.nodeta.fi/2009/02/22/presenting-at-uratikas-tkk/</link>
+		<comments>http://blog.nodeta.fi/2009/02/22/presenting-at-uratikas-tkk/#comments</comments>
+		<pubDate>Sun, 22 Feb 2009 14:20:06 +0000</pubDate>
+		<dc:creator>Otto Hilska</dc:creator>
+		
+		<category><![CDATA[Rails]]></category>
+
+		<category><![CDATA[Uncategorized]]></category>
+
+		<category><![CDATA[sponsor]]></category>
+
+		<category><![CDATA[tkk]]></category>
+
+		<category><![CDATA[uratikas]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=76</guid>
+		<description><![CDATA[Even though some companies have publicly announced not to hire summer trainees, that&#8217;s definitely not the case at Nodeta. Our APIdock team from the last year is continuing also this summer, but in a bit different project (to be announced!). We also plan to hire a couple of new developers and designers.
+We have a long [...]]]></description>
+			<content:encoded><![CDATA[<p>Even though some companies have publicly announced not to hire summer trainees, that&#8217;s definitely not the case at Nodeta. Our APIdock team from the last year is continuing also this summer, but in a bit different project (to be announced!). We also plan to hire a couple of new developers and designers.</p>
+<p>We have a long track record of sponsoring the university student organizations here in Finland. You can already find our logo from the websites of <a href="http://tietoteekkarikilta.fi/">Computer Science students at Tampere University of Technology</a>, <a href="http://m0.tietokilta.fi/">Computer Science students at Helsinki University of Technology</a>, <a href="http://tko-aly.fi/">Computer Science students at Helsinki University</a> and the <a href="http://kyykka.fi/">World Championships of Academic Kyykkä</a>.</p>
+<p>Next week we&#8217;re once again having some great time with our long-time partner, <a href="http://tietokilta.fi/">Tietokilta</a>. On February 25th they&#8217;re hosting a recruiting event at Helsinki University of Technology (TKK), auditorium TU2.</p>
+<p>We have a very tight 30 min. slot, but I&#8217;m trying to cover some interesting details about our own Scrum implementation, trying to explain the students why they should be spending their spare time with Ruby on Rails instead of something else, and I&#8217;m also going to present a small case study about one of our projects.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/02/22/presenting-at-uratikas-tkk/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>APIdock + vim integration</title>
+		<link>http://blog.nodeta.fi/2009/02/19/apidock-vim-integration/</link>
+		<comments>http://blog.nodeta.fi/2009/02/19/apidock-vim-integration/#comments</comments>
+		<pubDate>Thu, 19 Feb 2009 12:32:58 +0000</pubDate>
+		<dc:creator>Otto Hilska</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[Rails]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=75</guid>
+		<description><![CDATA[I&#8217;m a vim user myself, and I was very happy to find that the guys at Akita On Rails had put together a small vim helper that allows you to jump directly to the APIdock page of the given Rails keyword. You can find it from their Github dotfiles commit.
+Keep these contributions coming. :)
+UPDATE: There&#8217;re [...]]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m a <a href="http://www.vim.org/">vim</a> user myself, and I was very happy to find that the guys at <a href="http://www.akitaonrails.com/">Akita On Rails</a> had put together a small vim helper that allows you to jump directly to the APIdock page of the given Rails keyword. You can find it from their <a href="http://github.com/fabiokung/vimfiles/commit/6723ec056282f4d2d66d214c921111f57fa48035">Github dotfiles commit</a>.</p>
+<p>Keep these contributions coming. :)</p>
+<p><strong>UPDATE:</strong> There&#8217;re now <a href="http://imaginateaqui.net/blog/2009/02/apidock-emacs-integration/">emacs bindings</a> available as well.</p>
+<p><strong>UPDATE 2:</strong> One of our own guys also implemented a <a href="http://github.com/lautis/ruby-on-rails-tmbundle/tree/master">TextMate command</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/02/19/apidock-vim-integration/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Ruby 1.8.7 imported</title>
+		<link>http://blog.nodeta.fi/2009/01/16/ruby-187-imported/</link>
+		<comments>http://blog.nodeta.fi/2009/01/16/ruby-187-imported/#comments</comments>
+		<pubDate>Fri, 16 Jan 2009 15:29:52 +0000</pubDate>
+		<dc:creator>Otto Hilska</dc:creator>
+		
+		<category><![CDATA[APIdock]]></category>
+
+		<category><![CDATA[Ruby]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=73</guid>
+		<description><![CDATA[I just finished importing Ruby 1.8.7 to APIdock. It&#8217;s also the new default version, because usually it is better documented. However, there&#8217;re some incompatibilities between 1.8.6 and 1.8.7, so be sure to check the older documentation when something seems to be wrong.
+]]></description>
+			<content:encoded><![CDATA[<p>I just finished importing Ruby 1.8.7 to APIdock. It&#8217;s also the new default version, because usually it is better documented. However, there&#8217;re some incompatibilities between 1.8.6 and 1.8.7, so be sure to check the older documentation when something seems to be wrong.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/01/16/ruby-187-imported/feed/</wfw:commentRss>
+		</item>
+	</channel>
+</rss>

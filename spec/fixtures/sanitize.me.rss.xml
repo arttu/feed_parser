@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" version="2.0">
+
+<channel>
+	<title>Nodeta</title>
+	
+	<link>http://blog.nodeta.fi</link>
+	<description>on Rails</description>
+	<pubDate>Mon, 06 Jul 2009 09:53:54 +0000</pubDate>
+	<generator>http://wordpress.org/?v=2.7.1</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+			<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" href="http://feeds.feedburner.com/Nodeta" type="application/rss+xml" /><item>
+		<title>Announcing Flowdock - Real-time collaboration for teams</title>
+		<link>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/</link>
+		<comments>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/#comments</comments>
+		<pubDate>Sun, 05 Jul 2009 09:25:32 +0000</pubDate>
+		<dc:creator>Karri Saarinen</dc:creator>
+		
+		<category><![CDATA[Flowdock]]></category>
+
+		<category><![CDATA[collaboration]]></category>
+
+		<category><![CDATA[introduction]]></category>
+
+		<category><![CDATA[real-time]]></category>
+
+		<category><![CDATA[team]]></category>
+
+		<guid isPermaLink="false">http://blog.nodeta.fi/?p=137</guid>
+		<description><![CDATA[ ]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.flowdock.com"><img src="data:text/html;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="><img class="alignright size-full wp-image-133" style="float:right" title="Flowdock" src="http://blog.nodeta.fi/wp-content/uploads/2009/06/flowdock-logo1.png" alt="Flowdock" width="300" height="64" border="0"/></a><br />
+<strong>Today, we are happy announce our next product, Flowdock.</strong></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/feed/</wfw:commentRss>
+		</item>
+	</channel>
+</rss>
