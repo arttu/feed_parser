@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 $:.push File.expand_path("../lib", __FILE__)
-require 'feed_parser/version'
+require 'feed_parser'
 
 Gem::Specification.new do |s|
   s.name        = 'feed_parser'
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec-rails', '~> 2.6'
 
-  s.extra_rdoc_files = %w[README.md Changelog.md]
+  s.extra_rdoc_files = %w[README.md]
   s.require_paths = %w[lib]
 
   s.files         = `git ls-files`.split("\n")
