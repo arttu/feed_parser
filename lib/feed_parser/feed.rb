@@ -38,6 +38,8 @@ class FeedParser
     private
     def parse_url(feed_url)
       protocol, auth, *the_rest = URI.split(feed_url)
+      # insert a question mark in the beginning of query part of the uri
+      the_rest[-2].insert(0, '?') if the_rest[-2].is_a?(String)
       url = (protocol && [protocol, the_rest.join].join('://') || the_rest.join)
       basic_auth = auth.split(':') if auth
       {:url => url, :basic_auth => basic_auth}
