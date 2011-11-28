@@ -7,6 +7,38 @@ class NotSaneSanitizer
 end
 
 describe FeedParser do
+  describe FeedParser::Feed, "#new" do
+    it "should be able to open a feed url" do
+      parser = FeedParser.new(:url => "http://blog.example.com/feed/")
+      lambda {
+        parser.parse
+      }.should_not raise_error(ArgumentError)
+      lambda {
+        parser.parse
+      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    end
+
+    it "should be able to open feed urls with basic auth embedded to the url" do
+      parser = FeedParser.new(:url => "http://user:pass@blog.example.com/feed/")
+      lambda {
+        parser.parse
+      }.should_not raise_error(ArgumentError, /userinfo not supported/)
+      lambda {
+        parser.parse
+      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    end
+
+    it "should be able to open feed urls with only a user name embedded to the url" do
+      parser = FeedParser.new(:url => "http://user@blog.example.com/feed/")
+      lambda {
+        parser.parse
+      }.should_not raise_error(ArgumentError, /userinfo not supported/)
+      lambda {
+        parser.parse
+      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    end
+  end
+
   describe "#parse" do
     shared_examples_for "feed parser" do
       it "should not fail" do
