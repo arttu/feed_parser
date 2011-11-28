@@ -6,6 +6,7 @@ class FeedParser
       @guid = item.xpath(Dsl[@type][:item_guid]).text
       @title = item.xpath(Dsl[@type][:item_title]).text
       @author = item.xpath(Dsl[@type][:item_author]).text
+      @description = item.xpath(Dsl[@type][:item_description]).text
       @content = item.xpath(Dsl[@type][:item_content]).text
       self
     end
@@ -29,6 +30,7 @@ class FeedParser
         :title => title,
         :categories => categories,
         :author => author,
+        :description => description,
         :content => content
       }
     end

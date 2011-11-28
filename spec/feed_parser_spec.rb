@@ -90,6 +90,7 @@ describe FeedParser do
                 :title => "Ruby 1.8.7 imported",
                 :categories => ["APIdock", "Ruby"],
                 :author => "Otto Hilska",
+                :description => "I just finished importing Ruby 1.8.7 to APIdock. It&#8217;s also the new default version, because usually it is better documented. However, there&#8217;re some incompatibilities between 1.8.6 and 1.8.7, so be sure to check the older documentation when something seems to be wrong.\n",
                 :content => "<p>I just finished importing Ruby 1.8.7 to APIdock. It&#8217;s also the new default version, because usually it is better documented. However, there&#8217;re some incompatibilities between 1.8.6 and 1.8.7, so be sure to check the older documentation when something seems to be wrong.</p>\n"
               }
             ]

@@ -13,6 +13,7 @@ class FeedParser
         :item_title => "title",
         :item_categories => "category",
         :item_author => "creator",
+        :item_description => "description",
         :item_content => "encoded",
       }
     end
@@ -26,6 +27,7 @@ class FeedParser
         :item_title => "title",
         :item_categories => "category",
         :item_author => "author/name",
+        :item_description => "summary",
         :item_content => "content",
       }
     end
