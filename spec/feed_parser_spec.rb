@@ -84,6 +84,21 @@ describe FeedParser do
               }
             ]
         },
+        'basecamp.rss.xml' => {
+          :title => "Awesome project",
+          :url => "",
+          :items => [
+              {
+                :guid => "basecamp.00000000.Comment.1234567",
+                :link => "https://awesome.basecamphq.com/unique_item_link",
+                :title => "Comment posted: Re: Howdy how?",
+                :categories => [],
+                :author => "Ffuuuuuuu- Le.",
+                :description => "<div>trololooo</div><p>Company: awesome | Project: Awesome project</p>",
+                :content => ""
+              }
+            ]
+        },
         'TechCrunch.xml' => {
           :title => "TechCrunch",
           :url => "http://techcrunch.com",

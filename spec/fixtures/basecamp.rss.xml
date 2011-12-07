@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Awesome project</title>
+    <link></link>
+    <description>Recent items</description>
+    <language>en-us</language>
+    <ttl>40</ttl>
+    <item>
+      <title>Comment posted: Re: Howdy how?</title>
+      <description>&lt;div&gt;trololooo&lt;/div&gt;&lt;p&gt;Company: awesome | Project: Awesome project&lt;/p&gt;</description>
+      <pubDate>Wed, 09 Nov 2011 20:35:18 +0000</pubDate>
+      <guid isPermaLink="false">basecamp.00000000.Comment.1234567</guid>
+      <link>https://awesome.basecamphq.com/unique_item_link</link>
+      <dc:creator>Ffuuuuuuu- Le.</dc:creator>
+    </item>
+  </channel>
+</rss>

@@ -20,8 +20,15 @@ class FeedParser
     end
 
     def url
-      _url = @feed.xpath(Dsl[@type][:url]).text
-      @url = (!_url.nil? && _url.length > 0 && _url || @feed.xpath(Dsl[@type][:url]).attribute("href").text)
+      _url = case @type
+        when :rss
+          @feed.xpath(Dsl[@type][:url]) && @feed.xpath(Dsl[@type][:url])
+        when :atom
+          @feed.xpath(Dsl[@type][:url]).attribute("href")
+        else
+          nil
+      end
+      @url = _url && _url.text || ""
     end
 
     def items

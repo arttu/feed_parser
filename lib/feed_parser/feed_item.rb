@@ -6,8 +6,8 @@ class FeedParser
       @guid = item.xpath(Dsl[@type][:item_guid]).text
       @title = item.xpath(Dsl[@type][:item_title]).text
       @author = item.xpath(Dsl[@type][:item_author]).text
-      @description = item.xpath(Dsl[@type][:item_description]).text
-      @content = item.xpath(Dsl[@type][:item_content]).text
+      @description = possible_text(item.xpath(Dsl[@type][:item_description]))
+      @content = possible_text(item.xpath(Dsl[@type][:item_content]))
       self
     end
 
@@ -33,6 +33,11 @@ class FeedParser
         :description => description,
         :content => content
       }
+    end
+
+    private
+    def possible_text(element)
+      element && element.text || ''
     end
   end
 
