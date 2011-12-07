@@ -4,7 +4,12 @@ class FeedParser
 
     def initialize(feed_url)
       parsed_url = parse_url(feed_url)
-      @feed = Nokogiri::XML(open(parsed_url[:url], :http_basic_authentication => parsed_url[:basic_auth]))
+      raw_feed = if parsed_url[:basic_auth]
+        open(parsed_url[:url], :http_basic_authentication => parsed_url[:basic_auth])
+      else
+        open(parsed_url[:url])
+      end
+      @feed = Nokogiri::XML(raw_feed)
       @feed.remove_namespaces!
       @type = (@feed.search('rss')[0] && :rss || :atom)
       self

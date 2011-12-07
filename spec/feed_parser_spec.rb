@@ -8,34 +8,23 @@ end
 
 describe FeedParser do
   describe FeedParser::Feed, "#new" do
-    it "should be able to open a feed url" do
-      parser = FeedParser.new(:url => "http://blog.example.com/feed/")
-      lambda {
-        parser.parse
-      }.should_not raise_error(ArgumentError)
-      lambda {
-        parser.parse
-      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    def feed_xml
+      File.read(File.join(File.dirname(__FILE__), 'fixtures', 'nodeta.rss.xml'))
     end
 
-    it "should be able to open feed urls with basic auth embedded to the url" do
-      parser = FeedParser.new(:url => "http://user:pass@blog.example.com/feed/")
-      lambda {
-        parser.parse
-      }.should_not raise_error(ArgumentError, /userinfo not supported/)
-      lambda {
-        parser.parse
-      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    it "should fetch a feed by url" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/").and_return(feed_xml)
+      FeedParser::Feed.new("http://blog.example.com/feed/")
     end
 
-    it "should be able to open feed urls with only a user name embedded to the url" do
-      parser = FeedParser.new(:url => "http://user@blog.example.com/feed/")
-      lambda {
-        parser.parse
-      }.should_not raise_error(ArgumentError, /userinfo not supported/)
-      lambda {
-        parser.parse
-      }.should raise_error(SocketError, /getaddrinfo: nodename nor servname provided, or not known/)
+    it "should fetch a feed using basic auth if auth embedded to the url" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", :http_basic_authentication => ["user", "pass"]).and_return(feed_xml)
+      FeedParser::Feed.new("http://user:pass@blog.example.com/feed/")
+    end
+
+    it "should fetch a feed with only a user name embedded to the url" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", :http_basic_authentication => ["user"]).and_return(feed_xml)
+      FeedParser::Feed.new("http://user@blog.example.com/feed/")
     end
   end
 
