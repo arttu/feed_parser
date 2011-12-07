@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class FeedParser
 
-  VERSION = "0.2.0"
+  VERSION = "0.2.1"
 
   def initialize(opts)
     @url = opts[:url]
