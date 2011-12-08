@@ -3,17 +3,7 @@ class FeedParser
     attr_reader :type
 
     def initialize(feed_url)
-      parsed_url = parse_url(feed_url)
-
-      connection_options = {"User-Agent" => FeedParser::USER_AGENT}
-      connection_options[:http_basic_authentication] = parsed_url[:basic_auth] if parsed_url[:basic_auth]
-
-      raw_feed = if parsed_url[:protocol]
-        open(parsed_url[:url], connection_options)
-      else
-        open(parsed_url[:url])
-      end
-
+      raw_feed = open_or_follow_redirect(feed_url)
       @feed = Nokogiri::XML(raw_feed)
       @feed.remove_namespaces!
       @type = (@feed.search('rss')[0] && :rss || :atom)
@@ -53,6 +43,30 @@ class FeedParser
     end
 
     private
+
+    # Some feeds
+    def open_or_follow_redirect(feed_url)
+      parsed_url = parse_url(feed_url)
+
+      connection_options = {"User-Agent" => FeedParser::USER_AGENT}
+      connection_options[:http_basic_authentication] = parsed_url[:basic_auth] if parsed_url[:basic_auth]
+
+      connection_options[:redirect] = true if RUBY_VERSION >= '1.9'
+
+      if parsed_url[:protocol]
+        open(parsed_url[:url], connection_options)
+      else
+        open(parsed_url[:url])
+      end
+    rescue RuntimeError => ex
+      redirect_url = ex.to_s.split(" ").last
+      if URI.split(feed_url).first == "http" && URI.split(redirect_url).first == "https"
+        open_or_follow_redirect(redirect_url)
+      else
+        raise ex
+      end
+    end
+
     def parse_url(feed_url)
       protocol, auth, *the_rest = URI.split(feed_url)
       # insert a question mark in the beginning of query part of the uri

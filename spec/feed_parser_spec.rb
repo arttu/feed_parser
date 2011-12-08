@@ -12,19 +12,39 @@ describe FeedParser do
       File.read(File.join(File.dirname(__FILE__), 'fixtures', 'nodeta.rss.xml'))
     end
 
+    def http_connection_options
+      opts = {"User-Agent" => FeedParser::USER_AGENT}
+      opts[:redirect] = true if RUBY_VERSION >= '1.9'
+      opts
+    end
+
     it "should fetch a feed by url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT).and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
       FeedParser::Feed.new("http://blog.example.com/feed/")
     end
 
     it "should fetch a feed using basic auth if auth embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT, :http_basic_authentication => ["user", "pass"]).and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user", "pass"])).and_return(feed_xml)
       FeedParser::Feed.new("http://user:pass@blog.example.com/feed/")
     end
 
     it "should fetch a feed with only a user name embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT, :http_basic_authentication => ["user"]).and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user"])).and_return(feed_xml)
       FeedParser::Feed.new("http://user@blog.example.com/feed/")
+    end
+
+    it "should follow redirect based on the exception message" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: http://example.com/feed -> https://example.com/feed"))
+      FeedParser::Feed.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_return(feed_xml)
+      FeedParser::Feed.new("http://example.com/feed")
+    end
+
+    it "should not follow redirect from secure connection to non-secure one" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: https://example.com/feed -> http://example.com/feed"))
+      FeedParser::Feed.any_instance.should_not_receive(:open).with("http://example.com/feed", http_connection_options)
+      lambda {
+        FeedParser::Feed.new("https://example.com/feed")
+      }.should raise_error(RuntimeError, "redirection forbidden: https://example.com/feed -> http://example.com/feed")
     end
   end
 
