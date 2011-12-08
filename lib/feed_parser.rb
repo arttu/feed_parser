@@ -5,6 +5,8 @@ class FeedParser
 
   VERSION = "0.2.2"
 
+  USER_AGENT = "Ruby / FeedParser gem"
+
   def initialize(opts)
     @url = opts[:url]
     @@sanitizer = (opts[:sanitizer] || SelfSanitizer.new)

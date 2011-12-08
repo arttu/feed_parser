@@ -4,11 +4,16 @@ class FeedParser
 
     def initialize(feed_url)
       parsed_url = parse_url(feed_url)
-      raw_feed = if parsed_url[:basic_auth]
-        open(parsed_url[:url], :http_basic_authentication => parsed_url[:basic_auth])
+
+      connection_options = {"User-Agent" => FeedParser::USER_AGENT}
+      connection_options[:http_basic_authentication] = parsed_url[:basic_auth] if parsed_url[:basic_auth]
+
+      raw_feed = if parsed_url[:protocol]
+        open(parsed_url[:url], connection_options)
       else
         open(parsed_url[:url])
       end
+
       @feed = Nokogiri::XML(raw_feed)
       @feed.remove_namespaces!
       @type = (@feed.search('rss')[0] && :rss || :atom)
@@ -54,7 +59,7 @@ class FeedParser
       the_rest[-2].insert(0, '?') if the_rest[-2].is_a?(String)
       url = (protocol && [protocol, the_rest.join].join('://') || the_rest.join)
       basic_auth = auth.split(':') if auth
-      {:url => url, :basic_auth => basic_auth}
+      {:protocol => protocol, :url => url, :basic_auth => basic_auth}
     end
   end
 end

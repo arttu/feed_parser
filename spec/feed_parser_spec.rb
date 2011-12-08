@@ -13,17 +13,17 @@ describe FeedParser do
     end
 
     it "should fetch a feed by url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/").and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT).and_return(feed_xml)
       FeedParser::Feed.new("http://blog.example.com/feed/")
     end
 
     it "should fetch a feed using basic auth if auth embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", :http_basic_authentication => ["user", "pass"]).and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT, :http_basic_authentication => ["user", "pass"]).and_return(feed_xml)
       FeedParser::Feed.new("http://user:pass@blog.example.com/feed/")
     end
 
     it "should fetch a feed with only a user name embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", :http_basic_authentication => ["user"]).and_return(feed_xml)
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", "User-Agent" => FeedParser::USER_AGENT, :http_basic_authentication => ["user"]).and_return(feed_xml)
       FeedParser::Feed.new("http://user@blog.example.com/feed/")
     end
   end
