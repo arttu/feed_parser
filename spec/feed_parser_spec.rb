@@ -8,8 +8,8 @@ end
 
 describe FeedParser do
   describe FeedParser::Feed, "#new" do
-    def feed_xml
-      File.read(File.join(File.dirname(__FILE__), 'fixtures', 'nodeta.rss.xml'))
+    def feed_xml(filename = 'nodeta.rss.xml')
+      File.read(File.join(File.dirname(__FILE__), 'fixtures', filename))
     end
 
     def http_connection_options
@@ -45,6 +45,14 @@ describe FeedParser do
       lambda {
         FeedParser::Feed.new("https://example.com/feed")
       }.should raise_error(RuntimeError, "redirection forbidden: https://example.com/feed -> http://example.com/feed")
+    end
+
+    it "should use alternate url if there is no valid self url in the received feed xml" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("https://developers.facebook.com/blog/feed", http_connection_options).and_return(feed_xml('facebook.atom.xml'))
+      lambda {
+        feed = FeedParser::Feed.new("https://developers.facebook.com/blog/feed")
+        feed.url.should == "https://developers.facebook.com/blog/feed"
+      }.should_not raise_error
     end
   end
 

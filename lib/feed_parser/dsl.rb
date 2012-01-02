@@ -21,6 +21,7 @@ class FeedParser
       {
         :title => "/feed/title",
         :url => "/feed/link[@rel='self']",
+        :alternate_url => "/feed/link[@rel='alternate']",
         :item => "/feed/entry",
         :item_guid => "id",
         :item_link => "link",

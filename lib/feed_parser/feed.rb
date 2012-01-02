@@ -17,9 +17,10 @@ class FeedParser
     def url
       _url = case @type
         when :rss
-          @feed.xpath(Dsl[@type][:url]) && @feed.xpath(Dsl[@type][:url])
+          @feed.xpath(Dsl[@type][:url])
         when :atom
-          @feed.xpath(Dsl[@type][:url]).attribute("href")
+          @feed.xpath(Dsl[@type][:url]).first && @feed.xpath(Dsl[@type][:url]).attribute("href") ||
+          @feed.xpath(Dsl[@type][:alternate_url]).first && @feed.xpath(Dsl[@type][:alternate_url]).attribute("href")
         else
           nil
       end

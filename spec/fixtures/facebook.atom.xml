@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title type="text">Facebook Developer Blog</title>
+<updated>2011-12-30T17:00:00Z</updated>
+<id>urn:uuid:6c306ca7-ff0b-4f7a-b371-92964eac0f14</id>
+<link href="https://developers.facebook.com/blog/feed" rel="alternate" type="text/html"/>
+<author><name>Facebook</name></author>
+<entry>
+<title type="text">Facebook Platform SDK Support </title>
+<updated>2011-12-30T17:00:00Z</updated>
+<id>urn:uuid:210268602391001</id>
+<link href="http://developers.facebook.com/blog/post/624/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>Over the last few weeks, we have had several questions from developers as to which SDKs we support. We wanted to clarify that we provide support for the following:</p>
+
+<ul>
+<li><strong>JavaScript SDK</strong>: <a href="https://github.com/facebook/facebook-js-sdk">source</a> &amp; <a href="https://developers.facebook.com/docs/reference/javascript/">documentation</a></li>
+<li><strong>PHP SDK</strong>: <a href="https://github.com/facebook/facebook-php-sdk">source</a> &amp; <a href="https://developers.facebook.com/docs/reference/php/">documentation</a></li>
+<li><strong>iOS SDK</strong>: <a href="https://github.com/facebook/facebook-ios-sdk">source</a> &amp; <a href="https://developers.facebook.com/docs/reference/iossdk/">documentation</a></li>
+<li><strong>Android SDK</strong>: <a href="https://github.com/facebook/facebook-android-sdk">source</a> &amp; <a href="https://developers.facebook.com/docs/reference/androidsdk/">documentation</a></li>
+</ul>
+
+<p>Please note that we are moving the location of the JavaScript SDK repository from <a href="https://github.com/facebook/connect-js">connect-js</a> to <a href="https://github.com/facebook/facebook-js-sdk">facebook-js-sdk</a> and the location of the PHP SDK from <a href="https://github.com/facebook/php-sdk">php-sdk</a> to <a href="https://github.com/facebook/facebook-php-sdk">facebook-php-sdk</a>. Only the new repositories will be updated moving forward and the old repositories will be made private on April 1, 2012.</p>
+
+<p><strong>Reporting Issues</strong></p>
+
+<p>To report any bugs or issues with any of the above SDKs, please file a report in our <a href="https://developers.facebook.com/bugs">Bugs Tool</a>. We apologize for confusion caused by the Issues tabs in GitHub. We do not provide support for this channel and have since removed them from all of our GitHub repositories. We now have a dedicated team of engineers devoted to supporting developers and responding every day to bugs opened via our <a href="https://developers.facebook.com/bugs">Bugs Tool</a></p>
+
+<p><strong>Cookies used by the SDKs</strong></p>
+
+<p>Our JavaScript and PHP SDKs support a common cookie format that allows you to access Facebook Platform from both client and server side code in a seamless fashion.  Previously, we documented this cookie format.  This resulted in many apps and SDKs taking a dependency on it. We would like to consider this cookie format to be an implementation detail so that we can make changes for security or other reasons, and advise apps not to take a direct dependency on the format. Rather than attempting to parse our cookies, we recommend that you use one of the above supported SDKs or use OAuth endpoints to directly authenticate and authorize users. Our <a href="https://developers.facebook.com/docs/authentication/">Authentication Guide</a> highlights how to perform authentication and authorization directly.</p>
+
+<p><strong>Deprecated SDKs</strong></p>
+
+<p>Throughout this past year, we have deprecated or removed the below SDKs.  The fact that we no longer provide an official Facebook SDK for a given language/runtime, does not mean that you cannot write Facebook apps using those technologies.  Rather, all of Facebook Platform (Graph API, Dialogs, etc.) can be accessed from any language or runtime with an HTTP library in a simple and straightforward way.  In fact, many of our developers forgo our official SDKs completely and just use HTTP.  We are simply deprecating these SDKs based on our need to reduce surface area and provide better support.  We have no doubt that the various developer communities will create Facebook SDKs for these platforms over time.</p>
+
+<ul>
+<li><a href="https://github.com/facebook/python-sdk">Python SDK</a>:  The Python SDK is deprecated.  We intend on making the GitHub repository private on April 1, 2012.</li>
+<li><a href="https://github.com/facebook/csharp-sdk">C# SDK</a>: The C# SDK is deprecated. The GitHub repository will be made private on April 1, 2012.</li>
+<li><a href="https://github.com/facebook/facebook-iphone-sdk">Facebook iPhone SDK</a>: This SDK is deprecated and replaced by the <a href="https://github.com/facebook/facebook-ios-sdk">iOS SDK</a>.  We have made the repository private.</li>
+</ul>
+
+<p>Please leave any questions or feedback in the comments below.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">2011 In Review</title>
+<updated>2011-12-29T10:00:00Z</updated>
+<id>urn:uuid:305027782869835</id>
+<link href="http://developers.facebook.com/blog/post/623/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>As we near the end of 2011, we wanted to take a moment to recap the highlights from this year.  Before doing so, we want to thank you for creating social apps that have delighted millions of users.  From <a href="https://developers.facebook.com/showcase/games/">games</a> to <a href="https://developers.facebook.com/blog/post/603/">news</a>, and <a href="https://developers.facebook.com/blog/post/594/">music</a>, we were excited and impressed by what you created this year.  We cannot wait to see what we can build together in 2012.</p>
+
+<p><strong>New Products</strong></p>
+
+<p>We launched many new features that enabled more social and engaging user experiences:</p>
+
+<ul>
+<li><a href="https://developers.facebook.com/blog/post/472/">Comments Plugin</a> and <a href="https://developers.facebook.com/blog/post/490/">API</a></li>
+<li><a href="https://developers.facebook.com/blog/post/494/">Send Button</a> and <a href="https://developers.facebook.com/blog/post/514/">Dialog</a></li>
+<li><a href="https://developers.facebook.com/blog/post/609/">Subscribe Button</a></li>
+<li>New Insights (<a href="https://developers.facebook.com/blog/post/476/">Distribution</a>, <a href="https://developers.facebook.com/blog/post/521/">Spam</a>, <a href="https://developers.facebook.com/blog/post/537/">Credits</a>, and <a href="https://developers.facebook.com/blog/post/573/">Page</a>) </li>
+<li><a href="https://developers.facebook.com/blog/post/549/">Fluid Canvas</a></li>
+<li><a href="https://developers.facebook.com/blog/post/539/">Scores and Achievements API</a></li>
+<li><a href="https://developers.facebook.com/blog/post/564/">Open Graph</a> and <a href="https://developers.facebook.com/blog/post/563/">Timeline</a></li>
+<li><a href="https://developers.facebook.com/blog/post/575/">Social App Discovery on Mobile</a></li>
+</ul>
+
+<p><strong>New Tools for Developers</strong></p>
+
+<p>We focused on building new tools to help you develop apps more efficiently:</p>
+
+<ul>
+<li><a href="https://developers.facebook.com/blog/post/480/">Batch requests in Graph API</a></li>
+<li><a href="https://developers.facebook.com/blog/post/518/">New Developer App</a> (with <a href="https://developers.facebook.com/blog/post/542/">simplified UI</a>, <a href="https://developers.facebook.com/blog/post/527/">test users UI</a>, groups for <a href="https://developers.facebook.com/blog/post/531/">managing roles</a>, <a href="https://developers.facebook.com/blog/post/554/">integrated App Insights</a>)</li>
+<li><a href="https://developers.facebook.com/blog/post/517/">Graph API Explorer</a></li>
+<li><a href="https://developers.facebook.com/blog/post/559/">New Bugs Tool</a></li>
+<li><a href="https://developers.facebook.com/blog/post/545/">Partnership with Stack Overflow</a> for Technical Q&amp;A</li>
+<li><a href="https://developers.facebook.com/blog/post/558/">Partnership with Heroku</a> for easy hosting of Facebook Apps</li>
+<li><a href="https://developers.facebook.com/html5">HTML5 Portal</a></li>
+<li>Rewrote <a href="https://developers.facebook.com/docs/reference/api/">Graph API</a>, <a href="https://developers.facebook.com/docs/reference/fql/">FQL</a>, and SDK (<a href="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>, <a href="https://developers.facebook.com/docs/reference/php/">PHP SDK</a>, <a href="https://developers.facebook.com/docs/reference/iossdk/">iOS SDK</a>, and <a href="https://developers.facebook.com/docs/reference/androidsdk/">Android SDK</a>) documentation.</li>
+</ul>
+
+<p><strong>Transition to a Modern, Secure Platform</strong></p>
+
+<p>2011 was a year that we needed to streamline our Platform to make it more modern and secure. We know these sorts of changes were very painful and impacted many of you, but this was the right move for the ecosystem.  We reduced the surface of Platform a great deal, which will enable us to provide better support in the future.  These changes included:</p>
+
+<ul>
+<li>Removed <a href="https://developers.facebook.com/blog/post/523/">App Directory</a> and <a href="https://developers.facebook.com/blog/post/611/">App Profile Pages</a></li>
+<li>Completed Legacy Auth to <a href="https://developers.facebook.com/docs/oauth2-https-migration/">OAuth 2.0 &amp; HTTPS transition</a></li>
+<li>Announced <a href="https://developers.facebook.com/blog/post/568/">removal of FBML</a></li>
+<li>Announced <a href="https://developers.facebook.com/blog/post/616/">Graph API parity with and deprecation of REST API</a></li>
+</ul>
+
+<p><strong>Toward a Stable Platform</strong></p>
+
+<p>Late 2010 we first introduced <a href="https://developers.facebook.com/blog/post/417/">Operation Developer Love</a> and continued our efforts throughout 2011. We heard loud and clear that developers wanted a more stable Platform. As a result, we made the following changes:</p>
+
+<ul>
+<li><a href="https://developers.facebook.com/blog/post/550/">Beta Tier</a></li>
+<li><a href="https://developers.facebook.com/roadmap/change-policy/">90 day breaking change policy</a></li>
+<li><a href="https://developers.facebook.com/roadmap/">Roadmap</a>, Change Log, Bug Fix Log (found on our <a href="https://www.facebook.com/developers/emailsettings.php">weekly updates</a>)</li>
+<li><a href="https://developers.facebook.com/blog/post/557/">Redesigned Platform Live Status &amp; API</a></li>
+</ul>
+
+<p>In the new year we will continue to be focused on growth for your apps and working together to build social experiences for people across the web and mobile devices. Please post your thoughts in the comments below and keep the feedback coming.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Platform Updates: Operation Developer Love</title>
+<updated>2011-12-28T13:00:00Z</updated>
+<id>urn:uuid:249807641751977</id>
+<link href="http://developers.facebook.com/blog/post/621/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p><img src="https://developers.facebook.com/attachment/odl_tall.png" style="float:right;margin-left:17px;margin-right:15px;margin-top:-10px" height="180" /></p>
+
+<p>Last week we announced <a href="https://developers.facebook.com/blog/post/620/">Mobile Hacks</a> in New York and Boston and outlined <a href="/blog/post/619/">new features</a> we are making available to games developers.</p>
+
+<h1>Open Graph Approvals</h1>
+
+<p>With the worldwide rollout of <a href="https://blog.facebook.com/blog.php?post=10150408488962131">Facebook Timeline</a> underway, we are beginning to the process of reviewing Open Graph actions submitted for <a href="https://developers.facebook.com/docs/beta/opengraph/opengraph-approval/">approval</a>.  We expect to start approving actions in January and will post an update once we begin to approve actions in earnest.  Once the action is approved, the person who submitted the action for approval will receive a Facebook notification and the app can begin publishing this action to all users.</p>
+
+<h1>Mobile Hacks</h1>
+
+<p>This week we announced our <a href="https://developers.facebook.com/blog/post/620/">Mobile Hacks</a> in New York (January 18th) and Boston (January 20th). More information and signup instructions are available in the blog post linked. This is similar in format to the 
+Mobile Hack we ran in Palo Alto in October and is highly recommended for mobile developers.</p>
+
+<h1>90-day Breaking Change Announcement</h1>
+
+<p>Effective April 1st, 2012 the URLs provided for the <code>redirect_uri</code> parameter and any action links in <a href="https://developers.facebook.com/docs/reference/dialogs/feed/">Feed Dialog</a> posts must be owned by the app. This means that the URLs must match your app's Canvas URL or the 'App Domains' specified in your app settings.  This has been added to the <a href="/roadmap">Platform Roadmap</a>.</p>
+
+<h1>Platform Policies translated</h1>
+
+<p>We have translated the <a href="https://developers.facebook.com/policy">Facebook Platform Policies</a> into thirteen additional languages as an aid to our developers. We will also translate the documents into additional languages based on demand.</p>
+
+<table class="uiGrid" cellspacing="0" cellpadding="0">
+<tr height="20px"> 
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Arabic/"><b>العربية</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/ChineseHK/"><b>中文(简体)</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/ChineseTW/"><b>中文(台灣)</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Deutsch/"><b>Deutsch</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Espanol/"><b>Español</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Francais/"><b>Français</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Hebrew/"><b>עברית</b></a><br/>
+</td>
+</tr>
+
+<tr>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Italiano/"><b>Italiano</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Japanese/"><b>日本語</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Korean/"><b>한국어</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Polski/"><b>Polski</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Portugues/"><b>Português</b></a><br/>
+</td>
+<td width="75px">
+<a href="https://developers.facebook.com/policy/Turkce/"><b>Türkçe</b></a><br/>
+</td>
+</tr>
+</table>
+
+<h1>Upcoming changes on January 1, 2012</h1>
+
+<p><li><strong>Deprecating the <a href="/roadmap/deprecations/#js-sdk">FB.Data.*</a> JS SDK APIs.</strong> This will be no longer supported and will not be available to new apps.</li>
+<li><strong>Deprecating FB.Canvas.setAutoResize.</strong> We have renamed FB.Canvas.setAutoResize to FB.Canvas.setAutoGrow so that the method more accurately represents its function. Fb.Canvas.setAutoResize will be removed.</li>
+<li><strong>Deprecating FBML</strong> FBML will no longer be supported as of <b>January 1, 2012</b>. Aside from security and privacy related bugs, we will not fix any bugs related to FBML after January 1, 2012. On June 1, 2012 FBML endpoints will be removed from Platform</li>
+<li><strong>All apps will be opted into "Upgrade to Requests 2.0" and "Requests 2.0 Efficient"</strong> Existing apps will be opted into “Requests 2.0 Efficient” and "Upgrade to Requests 2.0" migrations and all developers must ensure that they are using the correct request_id format and deleting requests appropriately. Details <a href="/blog/post/569">in this blog post</a></li>
+<li><strong>Enforcing Credits Policy</strong> We have added a new policy to the <a href="/policy/credits">Facebook Credits Terms</a> that prohibits routing Credits from one app to another app without our prior authorization.</li></p>
+
+<pre><code>2.14 You may not accept Credits in one app and deliver or 
+transfer the purchase to the user in another app without 
+our prior authorization. For example, an app solely designed
+to facilitate transactions is not permitted.
+</code></pre>
+
+<p>Apps that are not compliant by January 1, 2012 run the risk of having their Credits disabled shortly after.</p>
+
+<p>Please refer to the <a href="https://developers.facebook.com/roadmap">Platform Roadmap</a> for more information on these and other upcoming changes.</p>
+
+<h1>Bug Activity from 12/21 to 12/27</h1>
+
+<p><li>197 bugs were reported</li>
+<li>45 bugs were reproducible and accepted (after duplicates removed)</li>
+<li>21 bugs were by design</li>
+<li>20 bugs were fixed</li>
+<li>173 bugs were duplicate, invalid, or need more information</li></p>
+
+<h1>Reported bugs fixed between 12/21 and 12/27</h1>
+
+<p><li><a href="https://developers.facebook.com/bugs/284031408314724">FQL place table columns latitude &amp; longitude are documented as int, not float</a></li>
+<li><a href="https://developers.facebook.com/bugs/253725174693478">FQL Mailbox Folder</a></li>
+<li><a href="https://developers.facebook.com/bugs/220904677985962">Oauth Validation error when exchanging Oauth 'code' for an access token</a></li>
+<li><a href="https://developers.facebook.com/bugs/146399405469364">Facebook Linter throwing error</a></li>
+<li><a href="https://developers.facebook.com/bugs/176687439095617">Description of "country" field in Order docs is incorrect</a></li>
+<li><a href="https://developers.facebook.com/bugs/336477446379106">FB Login is working erratically, and not at all on some sites.</a></li>
+<li><a href="https://developers.facebook.com/bugs/314958038528381">Uncaught exception 602</a></li>
+<li><a href="https://developers.facebook.com/bugs/200182053398723">Connection between application and page gets lost</a></li>
+<li><a href="https://developers.facebook.com/bugs/333734626643727">Wrong translation of 'Recommend' into Danish</a></li>
+<li><a href="https://developers.facebook.com/bugs/184502608306687">Feed privacy defaults not applied for users without timeline</a></li>
+<li><a href="https://developers.facebook.com/bugs/258759030849050">SCRIPT70: Permission denied all.js, line 22 character 4321 - Internet Explorer 9</a></li>
+<li><a href="https://developers.facebook.com/bugs/239526859438448">strange beaviour while setting app restrictions</a></li>
+<li><a href="https://developers.facebook.com/bugs/233301976725432">Facebook Credits not working anymore on tabs</a></li>
+<li><a href="https://developers.facebook.com/bugs/134593003309104">Credits Documentation</a></li>
+<li><a href="https://developers.facebook.com/bugs/269538539734056">login-button documentation is wrong with oauth 2</a></li>
+<li><a href="https://developers.facebook.com/bugs/263705737003195">https://developers.facebook.com/docs/mobile/ios/sso/ is invalid</a></li>
+<li><a href="https://developers.facebook.com/bugs/118464591591635">Link to docs/opengraph/devtool/boxes/ not found</a></li>
+<li><a href="https://developers.facebook.com/bugs/267274006628944">Graph API Search Volume Decreasing</a></li>
+<li><a href="https://developers.facebook.com/bugs/290174694331930">Item with a 1 credit value does not display correctly in the js modal dialogue</a></li>
+<li><a href="https://developers.facebook.com/bugs/148135148603931">Add keyboard shortcuts</a></li></p>
+
+<h1>Activity on <a href="http://facebook.stackoverflow.com">facebook.stackoverflow.com</a> this week</h1>
+
+<p><li>75 questions asked</li>
+<li>18 <a href="http://blog.stackoverflow.com/2008/09/ok-now-define-answered/">answered</a>, 24% answered rate</li>
+<li>36 replied, 48% reply rate</li></p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Mobile Hack Coming To Boston and New York </title>
+<updated>2011-12-22T17:30:00Z</updated>
+<id>urn:uuid:121501427966504</id>
+<link href="http://developers.facebook.com/blog/post/620/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>
+In October, we <a href="https://developers.facebook.com/blog/post/575/">announced the extension of Platform to Mobile</a>, bringing social channels to mobile apps. The same month we invited mobile developers to join us for a Mobile Hack in Palo Alto. Some 300 developers came for a full day of learning about Facebook Platform for Mobile and hacking with Facebook engineers. A few dozen projects were put together that night and a panel selected the best ones, which were recognized and awarded. 
+</p>
+
+<p>
+We are now excited to announce that we are hosting Mobile Hacks in Boston and New York:
+</p>
+
+<p>
+New York on January 18th: Sign up <a href="http://mobilehacknewyork.eventbrite.com"> here</a>.
+</p>
+
+<p>
+Boston on January 20th: Sign up <a href="http://bostonhack.eventbrite.com"> here</a>.
+</p>
+
+<p>
+At this all-day event you will learn about building social mobile apps and then do some hacking on your own projects, with assistance and guidance from Facebook engineers. We will cover both native and mobile web (HTML5) app development, and you will have a chance to present in front of a panel of experts. Prizes will be awarded for the best apps. Your project does not need to be created from scratch at the event. Start building now using our <a herf="https://developers.facebook.com/docs/guides/mobile/">Mobile resource center</a>
+</p>
+
+<p>Space is limited for these events. Sign up now to secure your spot.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Platform Updates for Games Developers</title>
+<updated>2011-12-22T16:30:00Z</updated>
+<id>urn:uuid:331099280235271</id>
+<link href="http://developers.facebook.com/blog/post/619/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>As part of ongoing efforts to optimize Platform for game developers, and to reflect the diversity of games growing on Platform, we’ve made updates to the games categories as well as some of the main communication channels, including Bookmarks and the <a href="https://www.facebook.com/games">Apps and Games Dashboard</a>. Additionally, we are testing new feed stories on mobile, to improve app engagement. Finally we have also published a <a href="https://developers.facebook.com/docs/guides/games/">Games Tutorial</a> to provide game developers best practices for building on Facebook Platform.</p>
+
+<h3>Games Category Updates</h3>
+
+<p>As the types of games on Facebook become more diverse, we’re updating and expanding the list of game categories.  It's important that your game is categorized correctly, as we use categories to surface relevant games for users, which can increase distribution for your games. In order to streamline the categories, we've removed the "Other" category. If your game is categorized as "Other", you will need to pick a new category.</p>
+
+<p>Here are the additional updates:</p>
+
+<ul>
+<li>We've added new categories for "Casino", "Family", "Sports", "Strategy" and "Word".</li>
+<li>"Role Playing" is now "Adventure".</li>
+<li>"Virtual World" is now "Simulation".</li>
+</ul>
+
+<p>Here is the full list of the updated Games Categories:</p>
+
+<table>
+<tr>
+<td>Action & Arcade </td>
+<td>Casino</td>
+<td>Sports</td></tr>
+<tr><td>Adventure</td>
+<td>Family </td>
+<td>Strategy </td></tr>
+<tr><td>Board </td>
+<td>Puzzle  </td>
+<td>Trivia </td></tr>
+<tr><td>Card </td>
+<td>Simulation</td>
+<td>Word</td></tr>
+</table>
+
+<p>To set your Game Category, go to the <a href="https://developers.facebook.com/apps">Developer App</a> and then hit "Edit Settings" for your app. You can now categorize your app by navigating to About > Basic Info and selecting "Games" in the first drop down menu in the category field and then selecting the relevant Game sub-category in the second drop down menu.</p>
+
+<p><img src="https://developers.facebook.com/attachment/game_categories.gif"/></p>
+
+<h3>Bookmarks Updated</h3>
+
+<p>Bookmarks are one of the top drivers of re-engagement for apps. We recently increased the number of bookmarks at the top right of every canvas page from four to six. Early results have shown that this has increased referrals from canvas bookmarks to games by 20%.</p>
+
+<p><img src="https://developers.facebook.com/attachment/canvas_bookmarks.png"/></p>
+
+<p>We've also updated bookmark counters on the home page to clear automatically once clicked, similar to how notifications behave. Previously, these counters would clear once the requests expired or were deleted by the developer. This update should make it clearer to users when they have a pending action and drive greater re-engagement.</p>
+
+<p><img src="https://developers.facebook.com/attachment/clicking_counter.gif"/></p>
+
+<h3>Combined Apps &amp; Games Dashboard</h3>
+
+<p>We combined the Games and Apps dashboards into a single dashboard, called <a href="https://www.facebook.com/games">"Apps and Games"</a>.  The updated dashboard will allow users to see all their requests and invites in a single page and will highlight new apps and games to them. Invites from friends are pinned to the top of the dashboard, and the top apps section showcases the apps and games friends are using most.</p>
+
+<p>We believe a combined dashboard will grow the apps and games ecosystem by creating a single place where users can discover and re-engage with your apps.</p>
+
+<p><img width="650px" src="https://developers.facebook.com/attachment/app_dashboard.gif"/></p>
+
+<h3>Testing Games Stories in the Mobile News Feed</h3>
+
+<p>We’ve recently begun testing aggregated game stories for <a href="https://developers.facebook.com/docs/guides/mobile/">mobile platform</a>  apps to drive traffic from mobile devices to games. Gamers and non-gamers alike will see stories for the games their friends are playing the most. As we gather user and developer feedback from this test, we’ll continue to iterate on the feature as we focus on making feed a strong acquisition channel for developers.</p>
+
+<p><img width="300px" align="center" src="https://developers.facebook.com/attachment/mobile_stories2.gif"/></p>
+
+<p>To track referrals coming from this story you look for the ref param "feed_gameplay".</p>
+
+<h3>Games Tutorial</h3>
+
+<p>Earlier this month we hosted the first ever Social Games Hack at the Facebook HQ and have since <a href="https://developers.facebook.com/blog/post/613/">posted videos</a> for all the content that was presented there. As a follow up we have created a <a href="https://developers.facebook.com/docs/guides/games/">Games Tutorial</a> to help developers get started with building social games on Facebook. This tutorial provides several pro-tips and best practices for using our <a href="https://developers.facebook.com/docs/guides/games/#social_channels">social channels</a>, building <a href="https://developers.facebook.com/docs/guides/games/#best_practices">seamless experiences on Canvas</a> and finally <a href="https://developers.facebook.com/docs/guides/games/#monetization">monetization strategies</a> on Facebook.</p>
+
+<p>Please provide us thoughts and feedback in the comments below.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Platform Updates: Operation Developer Love</title>
+<updated>2011-12-21T19:15:00Z</updated>
+<id>urn:uuid:208699092548439</id>
+<link href="http://developers.facebook.com/blog/post/618/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p><img src="http://developers.facebook.com/attachment/odl_tall.png" style="float:right;margin-left:17px;margin-right:15px;margin-top:-10px" height="180" /></p>
+
+<p>Last week we <a href="https://blog.facebook.com/blog.php?post=10150408488962131">released Timeline</a> to our worldwide audience and made it <a href="https://blog.facebook.com/blog.php?post=10150408335607131">available on mobile</a>. We also <a href="https://developers.facebook.com/docs/reference/rest/">deprecated the REST API</a> and completed porting all intended functionality over to the Graph API.</p>
+
+<p><b>Upcoming changes on January 1, 2012</b></p>
+
+<ul>
+<li><b>Deprecating the <a href="/roadmap/deprecations/#js-sdk">FB.Data.*</a> JS SDK APIs</b> This will be no longer supported and will not be available to new apps.</li>
+<li><b>Deprecating FB.Canvas.setAutoResize</b> We have renamed FB.Canvas.setAutoResize to FB.Canvas.setAutoGrow so that the method more accurately represents its function. Fb.Canvas.setAutoResize will be removed.</li>
+<li><b>Deprecating FBML</b> FBML will no longer be supported as of <b>January 1, 2012</b>. Aside from security and privacy related bugs, we will not fix any bugs related to FBML after January 1, 2012. On June 1, 2012 FBML endpoints will be removed from Platform</li>
+<li><b>All apps will be opted into "Upgrade to Requests 2.0" and "Requests 2.0 Efficient"</b> Existing apps will be opted into “Requests 2.0 Efficient” and "Upgrade to Requests 2.0" migrations and all developers must ensure that they are using the correct request_id format and deleting requests appropriately. Details <a href="https://developers.facebook.com/blog/post/569/">here</a></li>
+<li><b>Enforcing Credits Policy</b> We have added a new policy to the <a href="https://developers.facebook.com/policy/credits/">Facebook Credits Terms</a> that prohibits routing Credits from one app to another app without our prior authorization.
+<blockquote>2.14 You may not accept Credits in one app and deliver or transfer the purchase to the user in another app without our prior authorization. For example, an app solely designed to facilitate transactions is not permitted.</blockquote>
+<p>Apps that are not compliant by January 1, 2012 run the risk of having their Credits disabled shortly after.</li>
+</ul>
+
+<p>
+Please refer to the <a href="https://developers.facebook.com/roadmap">Platform Roadmap</a> for more info on these and other upcoming changes.
+</p>
+
+<p>
+<b>Bug Activity from 12/13 to 12/20</b>
+</p>
+
+<ul>
+<li>253 bugs were reported</li>
+<li>60 bugs were reproducible and accepted (after duplicates removed)</li>
+<li>42 bugs were by design</li>
+<li>19 bugs were fixed</li>
+<li>116 bugs were duplicate, invalid, or need more information</li>
+</ul>
+
+<p>
+<b>Bugs fixed from 12/13 to 12/20</b>
+</p>
+
+<ul>
+<li><a href="https://developers.facebook.com/bugs/331011633576158">"friends_relationship_details" permission is not needed to get "significant_other"</a></li>
+<li><a href="https://developers.facebook.com/bugs/134909119955013">Tumblr communication problems with Facebook</a></li>
+<li><a href="https://developers.facebook.com/bugs/259293390797540">The page at "url" could not be reached because the server returned status code 400.</a></li>
+<li><a href="https://developers.facebook.com/bugs/263024387084809">"App Display Name cannot be similar to the name of any apps built by Facebook."</a></li>
+<li><a href="https://developers.facebook.com/bugs/154027108034989">Application name can't contains text "pira"</a></li>
+<li><a href="https://developers.facebook.com/bugs/299443436767391">Test User Making friend connections Documentation Unclear </a></li>
+<li><a href="https://developers.facebook.com/bugs/151419708293750">FB.init documentation lists oauth:false as default</a></li>
+<li><a href="https://developers.facebook.com/bugs/327795570583048">facebook login</a></li>
+<li><a href="https://developers.facebook.com/bugs/212781908800717">reachestimate sometimes fails with an unknown error</a></li>
+<li><a href="https://developers.facebook.com/bugs/199300110158548">Broken link: Social Channels ->News Feed -> Feed Graph Object: Publish via the Graph API -> permission</a></li>
+<li><a href="https://developers.facebook.com/bugs/160403440728562">video_tag query example uses wrong table</a></li>
+<li><a href="https://developers.facebook.com/bugs/302173113155841">Requests 1.0 not returning ids</a></li>
+<li><a href="https://developers.facebook.com/bugs/287778994600858">Basic JS method hasOwnProperty broken on FB JS library</a></li>
+<li><a href="https://developers.facebook.com/bugs/150414541729973">Auth Dialog settings do not show up</a></li>
+<li><a href="https://developers.facebook.com/bugs/253503981376269">De-Authorization Call never comes when using SSL</a></li>
+<li><a href="https://developers.facebook.com/bugs/295873967110238">all proxy email failing - connection refused by proxymail-mta.facebook.com</a></li>
+<li><a href="https://developers.facebook.com/bugs/182743808483002">Null fields in FQL friend queries</a></li>
+<li><a href="https://developers.facebook.com/bugs/304904889528423">Value cannot be null</a></li>
+<li><a href="https://developers.facebook.com/bugs/287153384639014">Auto-frictonless payments only work for items costing 30 credits or less</a></li>
+</ul>
+
+<p>
+<b>Activity on <a href="http://facebook.stackoverflow.com">facebook.stackoverflow.com</a> this week:</b>
+</p>
+
+<ul>
+<li>126 questions asked</li>
+<li>26 <a href="http://blog.stackoverflow.com/2008/09/ok-now-define-answered/">answered</a>, 21% answered rate</li>
+<li>56 replied, 44% reply rate</li>
+</ul>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Deprecating the REST API</title>
+<updated>2011-12-21T11:30:00Z</updated>
+<id>urn:uuid:235681453169536</id>
+<link href="http://developers.facebook.com/blog/post/616/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>We <a href="https://developers.facebook.com/blog/post/377/">announced</a> the <a href="https://developers.facebook.com/docs/reference/api">Graph API</a> at <a href="https://developers.facebook.com/blog/post/379">f8 2010</a>. Since that event, we have been working hard to ensure  that the most important functionality that developers were using with the <a href="https://developers.facebook.com/docs/reference/rest/">REST API</a> is available via the <a href="https://developers.facebook.com/docs/reference/api">Graph API</a>. For the past several months we have been slowly <a href="https://developers.facebook.com/blog/post/553/">launching</a> new features in the Graph API to bring it up to parity with the REST API.</p>
+
+<p>Today, we are launching the last two remaining APIs that we intend to port to the Graph API. <b>With this we are officially deprecating the REST API</b>.</p>
+
+<p>Note: Deprecating the REST API does not mean we are removing it, but we are actively encouraging all developers to use the Graph API for any new apps and to move existing apps to use it, as well. Moving forward, all new features will only be available in the Graph API and the level of support will be higher on a non-deprecated API.</p>
+
+<h3>Accessing app properties via the Graph API and FQL</h3>
+
+<p>We have added the ability to read and manage several new app property fields via the Graph API <a href="https://developers.facebook.com/docs/reference/api/application">application object</a>. It is also possible to read these properties via the <a href="https://developers.facebook.com/docs/reference/fql/application/">application FQL table</a>.</p>
+
+<p>To retrieve a list of properties from an app, issue an <code>HTTP GET</code> with an <code>app access_token</code> to <code>https://graph.facebook.com/APP_ID?fields=PROPERTY_NAMES</code>, specifying the names of the property values you want to retrieve in a comma-separated list. See the Graph API <a href="https://developers.facebook.com/docs/reference/api/application">application object</a> for a list of available properties and return types.</p>
+
+<p>For example, the following HTTP request retrieves some of the fields related to the new authentication dialog:</p>
+
+<pre><code> GET https://graph.facebook.com/APP_ID/
+     ?fields=auth_dialog_headline,auth_dialog_perms_explanation
+     &amp;access_token=APP_ACCESS_TOKEN
+</code></pre>
+
+<p>To set any properties for an app, issue an <code>HTTP POST</code> with an <code>app access_token</code> to <code>https://graph.facebook.com/APP_ID?PROPERTY=VALUE</code> using the properties and types as defined in the Graph API <a href="https://developers.facebook.com/docs/reference/api/application">application object</a>. Not all app properties can be edited via the API, such as <code>id</code>, <code>logo_url</code>, etc. Array properties can be unset by passing an empty <code>array</code>.</p>
+
+<p>For example, the following HTTP request sets some of the fields related to the new authentication dialog:</p>
+
+<pre><code> POST https://graph.facebook.com/APP_ID/
+      ?auth_dialog_headline=My%20great%20headline
+      &amp;auth_dialog_perms_explanation=Some%20explanatory%20text
+      &amp;access_token=APP_ACCESS_TOKEN
+</code></pre>
+
+<p>You can obtain an <code>app access_token</code> from the Graph API <b>token endpoint</b> at <code>https://graph.facebook.com/oauth/access_token</code>. See the <a href="https://developers.facebook.com/docs/authentication/#app-login">App Login section of the Authentication documentation</a> for more information.</p>
+
+<h3>Accessing Developer Roles for an App via the Graph API and FQL</h3>
+
+<p>We have added the ability to read and manage developer roles for an application via the <a href="https://developers.facebook.com/docs/reference/api/application#roles">roles connection</a> on the Graph API <code>application</code> object. It is also possible to query developer roles via the <a href="https://developers.facebook.com/docs/reference/fql/developer/">developer FQL table</a>.</p>
+
+<p>In order to read the developer roles for an app, issue an <code>HTTP GET</code> request to <code>https://graph.facebook.com/APP_ID/roles</code> using an <code>app access_token</code>. We will return an <code>array</code> of objects containing string properties <code>app_id</code>, <code>user</code> and <code>role</code>. The possible values for role are <code>administrators</code>, <code>developers</code>, <code>testers</code> or <code>insights users</code>.</p>
+
+<p>To add a developer role, a <code>user access_token</code> for a user who is an administrator of the app is required. Issue an <code>HTTP POST</code> request to <code>https://graph.facebook.com/APP_ID/roles</code>, with the <code>user_id</code> specified in the <code>user</code> field, and the role (as above) in the <code>role</code> field. This returns <code>true</code> if successful. The user being added will receive a request via the <a href="https://developers.facebook.com/apps">Developer app</a> which they will need to accept before the role is confirmed.</p>
+
+<p>To remove a developer role, a <code>user access_token</code> for a user who is an administrator of the app is required. Issue an <code>HTTP DELETE</code> request to <code>https://graph.facebook.com/APP_ID/roles</code>, with the <code>user_id</code> specified in the <code>user</code> field. This will return <code>true</code> if successful, and the user will be removed immediately.</p>
+
+<p>Here is some sample code which reads all developer roles for your application using an app access token, and will allow a logged in app administrator to add and remove roles via calls to <code>FB.api()</code> using the <a href="https://developers.facebook.com/docs/reference/javascript/">JavaScript SDK</a>.</p>
+
+<pre>
+&lt;?php
+$app_id = 'YOUR_APP_ID';
+$app_secret = 'YOUR_APP_SECRET';
+
+// Query app access token
+$app_access_token = file_get_contents(
+  'https://graph.facebook.com/oauth/access_token?' .
+  'client_id='.$app_id.'&client_secret='.$app_secret.'&' .
+  'grant_type=client_credentials');
+
+// Query app developer roles
+$roles = json_decode(file_get_contents(
+  'https://graph.facebook.com/'.$app_id.'/roles?' .
+  $app_access_token
+));
+
+?&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div class="fb-login-button"&gt;Login with Facebook&lt;/div&gt;
+
+    &lt;h3&gt;Existing Roles&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;?php foreach ($roles-&gt;data as $role) { ?&gt;
+        user: &lt;?php echo $role-&gt;user ?&gt; / 
+        role: &lt;?php echo $role-&gt;role ?&gt; - 
+        &lt;a href="javascript:removeRole(&lt;?php echo $role-&gt;user ?&gt;)"&gt;remove&lt;/a&gt;&lt;br /&gt;
+      &lt;?php } ?&gt;
+    &lt;/p&gt;
+
+    &lt;h3&gt;Add new role&lt;/h3&gt;
+    &lt;p&gt;
+      user: &lt;input type="text" id="user" /&gt; / 
+      role: &lt;input type="text" id="role" /&gt; - 
+      &lt;a href="javascript:addRole()"&gt;add&lt;/a&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;Check developer console for API response.&lt;/p&gt;
+
+    &lt;div id="fb-root"&gt;&lt;/div&gt;
+    &lt;script src="http://connect.facebook.net/en_US/all.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    // Define APP_ID
+    var APP_ID = &lt;?php echo $app_id ?&gt;;
+
+    FB.init({
+      appId  : APP_ID,
+      status : true, // check login status
+      cookie : true, // enable cookies
+      xfbml  : true, // parse XFBML
+      oauth  : true // enable OAuth 2.0
+    });
+
+    // Function to remove role for a given user
+    var removeRole = function(user) {
+      FB.api('/' + APP_ID + '/roles', 'delete', { user: user }, logResponse);
+    };
+
+    // Function to add new role for a given user
+    var addRole = function() {
+      user = document.getElementById('user').value;
+      role = document.getElementById('role').value;
+      FB.api('/' + APP_ID + '/roles', 'post', 
+           { user: user, role: role }, logResponse);
+    };
+
+    var logResponse = function(response) {
+      console.log(response);
+    };
+   &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Please provide thoughts and feedback in the comments below.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Platform Updates: Operation Developer Love</title>
+<updated>2011-12-14T14:39:00Z</updated>
+<id>urn:uuid:151485951621103</id>
+<link href="http://developers.facebook.com/blog/post/615/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p><img src="http://developers.facebook.com/attachment/odl_tall.png" style="float:right;margin-left:17px;margin-right:15px;margin-top:-10px" height="180" /></p>
+
+<p>Last week we <a href="https://developers.facebook.com/blog/post/609/">introduced the Subscribe Button for Websites</a>, announced the <A href="https://developers.facebook.com/blog/post/611/">removal of App Profile Pages</a> on February 1st, 2012, provided a <a href="https://developers.facebook.com/blog/post/613/">recap on our recent Social Games Hack</a> and published a tutorial on <A href="https://developers.facebook.com/blog/post/612/">debugging Open Graph apps</a>.</p>
+
+<p>Finally, we updated <a href="https://developers.facebook.com/blog/post/614/">the JavaScript SDK to only support OAuth 2.0</a>. This new JavaScript SDK was first announced in July with the requirement that all apps to migrate by <a href="https://developers.facebook.com/docs/oauth2-https-migration/">October 1, 2011</a>. If your app was affected, read more about the specific changes that you need to make <a href="https://developers.facebook.com/blog/post/525/">here</a>. A friendly reminder that it is important to follow the <A href="http://developers.facebook.com/blog">Facebook Developer Blog</a> or the <a href="https://developers.facebook.com/roadmap">Roadmap</a> for breaking change updates. This can be done by <a href="https://www.facebook.com/developers/emailsettings.php">email</a> or <a href="https://developers.intern.facebook.com/blog/feed">RSS</a>.</p>
+
+<p><b>Platform Changes</b></p>
+
+<p>This week we completed the discontinuation of the Dashboard APIs with the exception of <code>dashboard.incrementCount</code>, <code>dashboard.decrementCount</code>, <code>dashboard.setCount</code> and <code>dashboard.getCount</code> methods. All apps should upgrade to the new <A href="https://developers.facebook.com/blog/post/464">Requests 2.0</A>.</p>
+
+<p><b>Upcoming changes on January 1, 2012</b></p>
+
+<ul>
+<li><b>Deprecating the <a href="/roadmap/deprecations/#js-sdk">FB.Data.*</a> JS SDK APIs</b> This will be no longer supported and will not be available to new apps.</li>
+<li><b>Deprecating FB.Canvas.setAutoResize</b> We have renamed FB.Canvas.setAutoResize to FB.Canvas.setAutoGrow so that the method more accurately represents its function. Fb.Canvas.setAutoResize will be removed.</li>
+<li><b>Deprecating FBML</b> FBML will no longer be supported as of <b>January 1, 2012</b>. Aside from security and privacy related bugs, we will not fix any bugs related to FBML after January 1, 2012. On June 1, 2012 FBML endpoints will be removed from Platform</li>
+<li><b>All apps will be opted into "Upgrade to Requests 2.0" and "Requests 2.0 Efficient"</b> Existing apps will be opted into “Requests 2.0 Efficient” and "Upgrade to Requests 2.0" migrations and all developers must ensure that they are using the correct request_id format and deleting requests appropriately. Details <a href="https://developers.facebook.com/blog/post/569/">here</a></li>
+<li><b>Enforcing Credits Policy</b> We have added a new policy to the <a href="https://developers.facebook.com/policy/credits/">Facebook Credits Terms</a> that prohibits routing Credits from one app to another app without our prior authorization.
+<blockquote>2.14 You may not accept Credits in one app and deliver or transfer the purchase to the user in another app without our prior authorization. For example, an app solely designed to facilitate transactions is not permitted.</blockquote>
+<p>Apps that are not compliant by January 1, 2012 run the risk of having their Credits disabled shortly after.</li>
+</ul>
+
+<p>
+Please refer to the <a href="https://developers.facebook.com/roadmap">Platform Roadmap</a> for more info on these and other upcoming changes.
+</p>
+
+<p>
+<b>Bug Activity from 12/6 to 12/13</b>
+</p>
+
+<ul>
+<li>210 bugs were reported</li>
+<li>89 bugs were reproducible and accepted (after duplicates removed)</li>
+<li>61 bugs were by design</li>
+<li>27 bugs were fixed</li>
+<li>71 bugs were duplicate, invalid, or need more information</li>
+</ul>
+
+<p>
+<b>Bugs fixed from 12/6 to 12/13</b>
+</p>
+
+<ul>
+<li><a href="https://developers.facebook.com/bugs/326926027320196">Link to the "How do I get reimbursed" page is wrong</a></li>
+<li><a href="https://developers.facebook.com/bugs/124995400948223">Duplicate attribute - num_posts - listed on Comment Plugin Documentation Page</a></li>
+<li><a href="https://developers.facebook.com/bugs/256444431075802">Dead link on http://developers.facebook.com/docs/guides/canvas/#insights</a></li>
+<li><a href="https://developers.facebook.com/bugs/158723520894230">BREAKING CHANGE: Format of Facebook API Response</a></li>
+<li><a href="https://developers.facebook.com/bugs/285440228160623">Documentation typo: "JavaScript" misspelled in link "JavaScrtip SDK" at https://developers.facebook.com/docs/reference/javascript/FB.init/</a></li>
+<li><a href="https://developers.facebook.com/bugs/267972309919356">"format error in Old REST API Documentation page</a></li>
+<li><a href="https://developers.facebook.com/bugs/242704499126462">New Auth does not send "code" to redirect page if users skips extended permissions</a></li>
+<li><a href="https://developers.facebook.com/bugs/228888177178407">Requests 1.0 no longer showing request message</a></li>
+<li><a href="https://developers.facebook.com/bugs/248587011865643">Cannot delete posts to app and fan pages</a></li>
+<li><a href="https://developers.facebook.com/bugs/114326045347805">Like Box feed photo squished</a></li>
+<li><a href="https://developers.facebook.com/bugs/182705755149358">connect() timed out!</a></li>
+<li><a href="https://developers.facebook.com/bugs/202061939872315">server whitelist does not accept ipv6 adddresses</a></li>
+<li><a href="https://developers.facebook.com/bugs/145804828853802">Facebook comments disappear past May 2011 v2</a></li>
+<li><a href="https://developers.facebook.com/bugs/240521779341234">Graph API stats for an adgroup - missing unique impressions</a></li>
+<li><a href="https://developers.facebook.com/bugs/308316382512599">Like Box Error.</a></li>
+<li><a href="https://developers.facebook.com/bugs/190140734398158">Facebook Send button missing icon</a></li>
+<li><a href="https://developers.facebook.com/bugs/188045844609566">Live stream box configuration error</a></li>
+<li><a href="https://developers.facebook.com/bugs/273142312725520">Allow page</a></li>
+<li><a href="https://developers.facebook.com/bugs/259085580801085">iphone and ipad apps lose URL context on redirect for canvas apps</a></li>
+<li><a href="https://developers.facebook.com/bugs/222763661119914">Facebook Ads API - Ad group Suggested Bid</a></li>
+<li><a href="https://developers.facebook.com/bugs/158684890893035">Dark scheme hides links on social plugin</a></li>
+<li><a href="https://developers.facebook.com/bugs/204942886240556">Broken Link - Mobile SSO Documentation</a></li>
+<li><a href="https://developers.facebook.com/bugs/174276242655775">fb:comment returning httpS content when called over http</a></li>
+<li><a href="https://developers.facebook.com/bugs/181487731927353">Notifications auto-scroll not working for game requests</a></li>
+<li><a href="https://developers.facebook.com/bugs/172406742840270">Live Stream Plugin not displaying posts</a></li>
+<li><a href="https://developers.facebook.com/bugs/216327195092981">Like button not counting likes for some app pages</a></li>
+<li><a href="https://developers.facebook.com/bugs/111829965587408">Bad request error</a></li>
+</ul>
+
+<p>
+<b>Activity on <a href="http://facebook.stackoverflow.com">facebook.stackoverflow.com</a> this week:</b>
+</p>
+
+<ul>
+<li>140 questions asked</li>
+<li>16 <A href="http://blog.stackoverflow.com/2008/09/ok-now-define-answered/">answered</a>, 11% answered rate</li>
+<li>50 replied, 36% reply rate</li>
+</ul>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Breaking Change: JavaScript SDK to oauth:true on December 13th</title>
+<updated>2011-12-12T17:00:00Z</updated>
+<id>urn:uuid:132266233552163</id>
+<link href="http://developers.facebook.com/blog/post/614/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p>As part of our continued efforts to migrate all apps to OAuth 2.0, we are opting in all apps using the new JavaScript SDK to OAuth 2.0 tomorrow at 11am Pacific Time. The deadline to support OAuth 2.0 was <a href="https://developers.facebook.com/docs/oauth2-https-migration/">October 1st, 2011</a>.</p>
+
+<p>The new JS SDK with OAuth 2.0 was introduced in July. Tomorrow, on <b>December 13th at 11am</b>, we will automatically default the <code>oauth</code> param to true in <code>FB.init</code>. With this change, please ensure that you are using <code>FB.getAuthResponse</code> to obtain the access token. Read more about the specific changes that you need to make <a href="https://developers.facebook.com/blog/post/525/">here</a>.</p>
+</div>]]></content>
+</entry>
+<entry>
+<title type="text">Facebook Social Games Hack Recap</title>
+<updated>2011-12-12T16:45:00Z</updated>
+<id>urn:uuid:126485374133170</id>
+<link href="http://developers.facebook.com/blog/post/613/" rel="alternate" type="text/html"/>
+<content type="text/html" xml:lang="en"><![CDATA[<div><p><img src="https://developers.facebook.com/attachment/GamesHACK.jpg" style="float:right;margin-left:17px;margin-right:15px;margin-top:10px" height="180" /></p>
+
+<p>Last week we hosted the first <a href="https://developers.facebook.com/blog/post/606/">Facebook Games HACK</a> at the Facebook HQ in Palo Alto.  More than 150 game developers including 6waves Lolapps, Crowdstar, EA, GameHouse, Gaikai, Gamespy, GSN, iWin, Kixeye, Konami, Making Fun, Moblyng, MTV Networks, NEXON, Paramount Pictures, Playdom, Popcap, Product Madness, Ubisoft, Wooga, and Zynga attended to discuss building social games on Facebook and to hack.</p>
+
+<h2>Sessions</h2>
+
+<p>The Facebook games team presented various sessions, starting with a <a href="https://www.facebook.com/photo.php?v=10150405064397000">Welcome</a> from from Carl Sjogreen, Director of Platform Products, followed by sessions on <a href="https://www.facebook.com/photo.php?v=10150404920517000">best practices for building Social Games on Facebook</a>, <a href="https://www.facebook.com/photo.php?v=10150405039412000">Scores and Achievements</a>, <a href="https://www.facebook.com/photo.php?v=10150404963667000">Open Graph</a>, <a href="https://www.facebook.com/photo.php?v=10150404971397000">Game scenarios for Open Graph</a> and the <a href="https://www.facebook.com/photo.php?v=10150405041947000">Facebook mobile platform</a>. The videos are all available on the <a href="https://www.facebook.com/platform">Facebook Platform Page</a> and also linked to from the session names above.</p>
+
+<h2>Winners of the night</h2>
+
+<p>Several developers stayed late into the night to code and presented their prototypes to our judges. GameHouse, Tien Len, Attributor and GameFace.me took home prizes for the most innovative hacks.</p>
+
+<p><a href="http://www.gamehouse.com/">GameHouse</a> built a social bubble-shooter game where friends can challenge each other, and results are published via the Open Graph. Tien Len incorporated Achievements into their  <a href="http://apps.facebook.com/multiplayer_tienlen/">HTML5 card game</a> and pushed it live at the event! Attributor built an Open Graph integration for their <a href="https://apps.facebook.com/shelflife/">Shelflife app</a> that published stories when users added books to their shelf while <a href="http://gameface.me">GameFace.me</a> personalized characters in a user's game based on friends' profile pictures and sent brag stories to those friends' News Feeds.</p>
+
+<p>We're focused on continuing to build features and tools for game developers to help them be successful, such as <a href="https://developers.facebook.com/blog/post/549/">Fluid Canvas</a>, <a href="https://developers.facebook.com/docs/score/">Scores</a>, <a href="https://developers.facebook.com/docs/achievements/">Achievements</a>, and the <a href="https://developers.facebook.com/docs/guides/canvas/">canvas ticker</a>, as well as <a href="https://developers.facebook.com/docs/beta/">Open Graph</a> and  <a href="https://developers.facebook.com/docs/guides/mobile/">mobile platform</a>. We look forward to seeing how you use the power of these new tools to enable users to share and connect around what they value most about their game experience. </p>
+
+<p>To stay updated on the latest games news, like the <a href="https://www.facebook.com/fbandgames">Facebook + Games Page</a>.  Please provide thoughts and feedback in the comments below. </p>
+</div>]]></content>
+</entry>
+</feed>
