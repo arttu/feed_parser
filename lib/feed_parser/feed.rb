@@ -2,7 +2,8 @@ class FeedParser
   class Feed
     attr_reader :type
 
-    def initialize(feed_url)
+    def initialize(feed_url, http_options = {})
+      @http_options = http_options
       raw_feed = open_or_follow_redirect(feed_url)
       @feed = Nokogiri::XML(raw_feed)
       @feed.remove_namespaces!
@@ -50,6 +51,7 @@ class FeedParser
       parsed_url = parse_url(feed_url)
 
       connection_options = {"User-Agent" => FeedParser::USER_AGENT}
+      connection_options.merge!(@http_options)
       connection_options[:http_basic_authentication] = parsed_url[:basic_auth] if parsed_url[:basic_auth]
 
       connection_options[:redirect] = true if RUBY_VERSION >= '1.9'

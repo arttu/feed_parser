@@ -1,3 +1,4 @@
+require 'openssl'
 require 'feed_parser'
 
 class NotSaneSanitizer
@@ -7,15 +8,23 @@ class NotSaneSanitizer
 end
 
 describe FeedParser do
+  def http_connection_options
+    opts = {"User-Agent" => FeedParser::USER_AGENT}
+    opts[:redirect] = true if RUBY_VERSION >= '1.9'
+    opts
+  end
+
+  describe "#new" do
+    it "should forward given http options to the OpenURI" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+      fp = FeedParser.new(:url => "http://blog.example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
+      fp.parse
+    end
+  end
+
   describe FeedParser::Feed, "#new" do
     def feed_xml(filename = 'nodeta.rss.xml')
       File.read(File.join(File.dirname(__FILE__), 'fixtures', filename))
-    end
-
-    def http_connection_options
-      opts = {"User-Agent" => FeedParser::USER_AGENT}
-      opts[:redirect] = true if RUBY_VERSION >= '1.9'
-      opts
     end
 
     it "should fetch a feed by url" do

@@ -9,6 +9,7 @@ class FeedParser
 
   def initialize(opts)
     @url = opts[:url]
+    @http_options = opts[:http] || {}
     @@sanitizer = (opts[:sanitizer] || SelfSanitizer.new)
     @@fields_to_sanitize = (opts[:fields_to_sanitize] || [:content])
     self
@@ -23,7 +24,7 @@ class FeedParser
   end
 
   def parse
-    @feed ||= Feed.new(@url)
+    @feed ||= Feed.new(@url, @http_options)
   end
 end
 
