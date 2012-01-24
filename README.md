@@ -28,6 +28,10 @@ Add to Gemfile
       pp feed_item
     end
 
+    # you can also pass http options to be used for the connection
+    # for available options, check out the OpenURI documentation: http://apidock.com/ruby/OpenURI
+    fp = FeedParser.new(:url => "http://example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
+
 ## Running tests
 
 Install dependencies by running `bundle install`.
