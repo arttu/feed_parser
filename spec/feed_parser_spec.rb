@@ -8,6 +8,10 @@ class NotSaneSanitizer
 end
 
 describe FeedParser do
+  def feed_xml(filename = 'nodeta.rss.xml')
+    File.read(File.join(File.dirname(__FILE__), 'fixtures', filename))
+  end
+
   def http_connection_options
     opts = {"User-Agent" => FeedParser::USER_AGENT}
     opts[:redirect] = true if RUBY_VERSION >= '1.9'
@@ -16,17 +20,13 @@ describe FeedParser do
 
   describe "#new" do
     it "should forward given http options to the OpenURI" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
       fp = FeedParser.new(:url => "http://blog.example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
       fp.parse
     end
   end
 
   describe FeedParser::Feed, "#new" do
-    def feed_xml(filename = 'nodeta.rss.xml')
-      File.read(File.join(File.dirname(__FILE__), 'fixtures', filename))
-    end
-
     it "should fetch a feed by url" do
       FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
       FeedParser::Feed.new("http://blog.example.com/feed/")
@@ -62,6 +62,13 @@ describe FeedParser do
         feed = FeedParser::Feed.new("https://developers.facebook.com/blog/feed")
         feed.url.should == "https://developers.facebook.com/blog/feed"
       }.should_not raise_error
+    end
+
+    it "should raise an error unless retrieved XML is not an RSS or an ATOM feed" do
+      FeedParser::Feed.any_instance.should_receive(:open).with("http://example.com/blog/feed/invalid.xml", http_connection_options).and_return("foo bar")
+      lambda {
+        FeedParser::Feed.new("http://example.com/blog/feed/invalid.xml")
+      }.should raise_error(FeedParser::UnknownFeedType, "Feed is not an RSS feed or an ATOM feed")
     end
   end
 

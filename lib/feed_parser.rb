@@ -7,6 +7,8 @@ class FeedParser
 
   USER_AGENT = "Ruby / FeedParser gem"
 
+  class FeedParser::UnknownFeedType < Exception ; end
+
   def initialize(opts)
     @url = opts[:url]
     @http_options = opts[:http] || {}
