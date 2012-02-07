@@ -32,6 +32,8 @@ Add to Gemfile
     # for available options, check out the OpenURI documentation: http://apidock.com/ruby/OpenURI
     fp = FeedParser.new(:url => "http://example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
 
+If the fetched XML is not a valid RSS or an ATOM feed, a FeedParser::UnknownFeedType is raised in FeedParser#parse.
+
 ## Running tests
 
 Install dependencies by running `bundle install`.
