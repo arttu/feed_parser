@@ -7,7 +7,7 @@ class FeedParser
       raw_feed = open_or_follow_redirect(feed_url)
       @feed = Nokogiri::XML(raw_feed)
       @feed.remove_namespaces!
-      @type = ((@feed.search('rss')[0] && :rss) || (@feed.search('/feed/title')[0] && :atom))
+      @type = ((@feed.xpath('/rss')[0] && :rss) || (@feed.xpath('/feed')[0] && :atom))
       raise FeedParser::UnknownFeedType.new("Feed is not an RSS feed or an ATOM feed") unless @type
       self
     end
