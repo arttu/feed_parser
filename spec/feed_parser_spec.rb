@@ -138,7 +138,7 @@ describe FeedParser do
                 :title => "Comment posted: Re: Howdy how?",
                 :categories => [],
                 :author => "Ffuuuuuuu- Le.",
-                :description => "&lt;div&gt;trololooo&lt;/div&gt;&lt;p&gt;Company: awesome | Project: Awesome project&lt;/p&gt;",
+                :description => "<div>trololooo</div><p>Company: awesome | Project: Awesome project</p>",
                 :content => ""
               }
             ]

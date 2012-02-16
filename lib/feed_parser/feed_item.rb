@@ -1,3 +1,5 @@
+require 'cgi'
+
 class FeedParser
   class FeedItem
     attr_reader :type
@@ -37,7 +39,12 @@ class FeedParser
 
     private
     def possible_html_content(element)
-      element && element.inner_html || ''
+      return '' if element.empty?
+      if element.attribute("type") == "html"
+        CGI.unescapeHTML(element.inner_html)
+      else
+        element.text
+      end
     end
   end
 
