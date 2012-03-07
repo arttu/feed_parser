@@ -40,10 +40,15 @@ class FeedParser
     private
     def possible_html_content(element)
       return '' if element.empty?
-      if element.attribute("type") == "html"
-        CGI.unescapeHTML(element.inner_html)
-      else
-        element.text
+      return element.text unless element.attribute("type")
+
+      case element.attribute("type").value
+        when 'html', 'text/html'
+          CGI.unescapeHTML(element.inner_html)
+        when 'xhtml'
+          element.xpath('*').to_xhtml
+        else
+          element.text
       end
     end
   end

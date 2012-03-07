@@ -196,6 +196,22 @@ describe FeedParser do
           :title => "Smashing Magazine",
           :url => "http://www.smashingmagazine.com/feed/atom/",
           # items: [] # <- fill in if you want to
+        },
+        'facebook.atom.xml' => {
+          :items => [
+              {
+                :guid => "urn:uuid:132266233552163",
+                :link => "http://developers.facebook.com/blog/post/614/",
+                :title => "Breaking Change: JavaScript SDK to oauth:true on December 13th",
+                :categories=>[],
+                :author => "",
+                :description => "",
+                :content => '<div><p>As part of our continued efforts to migrate all apps to OAuth 2.0, we are opting in all apps using the new JavaScript SDK to OAuth 2.0 tomorrow at 11am Pacific Time. The deadline to support OAuth 2.0 was <a href="https://developers.facebook.com/docs/oauth2-https-migration/">October 1st, 2011</a>.</p>
+
+<p>The new JS SDK with OAuth 2.0 was introduced in July. Tomorrow, on <b>December 13th at 11am</b>, we will automatically default the <code>oauth</code> param to true in <code>FB.init</code>. With this change, please ensure that you are using <code>FB.getAuthResponse</code> to obtain the access token. Read more about the specific changes that you need to make <a href="https://developers.facebook.com/blog/post/525/">here</a>.</p>
+</div>'
+              }
+            ]
         }
       }.each do |atom_fixture, test_cases|
         it "should parse #{atom_fixture}" do

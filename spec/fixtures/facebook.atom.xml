@@ -628,10 +628,10 @@ Please refer to the <a href="https://developers.facebook.com/roadmap">Platform R
 <updated>2011-12-12T17:00:00Z</updated>
 <id>urn:uuid:132266233552163</id>
 <link href="http://developers.facebook.com/blog/post/614/" rel="alternate" type="text/html"/>
-<content type="text/html" xml:lang="en"><![CDATA[<div><p>As part of our continued efforts to migrate all apps to OAuth 2.0, we are opting in all apps using the new JavaScript SDK to OAuth 2.0 tomorrow at 11am Pacific Time. The deadline to support OAuth 2.0 was <a href="https://developers.facebook.com/docs/oauth2-https-migration/">October 1st, 2011</a>.</p>
+<content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>As part of our continued efforts to migrate all apps to OAuth 2.0, we are opting in all apps using the new JavaScript SDK to OAuth 2.0 tomorrow at 11am Pacific Time. The deadline to support OAuth 2.0 was <a href="https://developers.facebook.com/docs/oauth2-https-migration/">October 1st, 2011</a>.</p>
 
 <p>The new JS SDK with OAuth 2.0 was introduced in July. Tomorrow, on <b>December 13th at 11am</b>, we will automatically default the <code>oauth</code> param to true in <code>FB.init</code>. With this change, please ensure that you are using <code>FB.getAuthResponse</code> to obtain the access token. Read more about the specific changes that you need to make <a href="https://developers.facebook.com/blog/post/525/">here</a>.</p>
-</div>]]></content>
+</div></content>
 </entry>
 <entry>
 <title type="text">Facebook Social Games Hack Recap</title>
