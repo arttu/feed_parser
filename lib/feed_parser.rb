@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class FeedParser
 
-  VERSION = "0.3.0"
+  VERSION = "0.3.1"
 
   USER_AGENT = "Ruby / FeedParser gem"
 
