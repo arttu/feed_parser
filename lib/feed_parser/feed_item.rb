@@ -57,7 +57,7 @@ class FeedParser
     def initialize(item)
       @type = :rss
       super
-      @link = item.xpath(Dsl[@type][:item_link]).text
+      @link = item.xpath(Dsl[@type][:item_link]).text.strip
       @categories = item.xpath(Dsl[@type][:item_categories]).map{|cat| cat.text}
     end
   end
@@ -66,7 +66,7 @@ class FeedParser
     def initialize(item)
       @type = :atom
       super
-      @link = item.xpath(Dsl[@type][:item_link]).attribute("href").text
+      @link = item.xpath(Dsl[@type][:item_link]).attribute("href").text.strip
       @categories = item.xpath(Dsl[@type][:item_categories]).map{|cat| cat.attribute("term").text}
     end
   end

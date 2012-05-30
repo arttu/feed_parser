@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <atom:link href="http://www.scrumalliance.org/rss" rel="self" type="application/rss+xml" />
+    <title>ScrumAlliance</title>
+    <link>http://scrumalliance.org/</link>
+    <pubDate>Wed, 23 May 2012 11:07:32 GMT</pubDate>
+    <description> Scrum Alliance </description>
+
+      <item>
+        <title>Testing in Scrum with a Waterfall Interaction</title>
+        <link> http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction</link>
+        <description>Sometimes, when testing user stories in Scrum, there's a final Waterfall  interaction to deal with. The scenario I present here is based on this  situation: a Scrum process with an interaction of sequential phases at  the end of the process to (re)test the whole developed functionality.  These sequential phases are mandatory for our organization, which  follows a Waterfall process for the releases of the product. So, for the  moment at least, we have to deal with this  and my experience is that  we aren't alone.</description>
+        <pubDate>Wed, 23 May 2012 11:07:03 GMT</pubDate>
+        <guid>http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction</guid>
+      </item>
+  </channel>
+</rss>

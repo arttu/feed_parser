@@ -143,6 +143,21 @@ describe FeedParser do
               }
             ]
         },
+        'scrumalliance.rss.xml' => {
+          :title => "ScrumAlliance",
+          :url => "http://scrumalliance.org/",
+          :items => [
+            {
+              :guid => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction",
+              :link => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction", # trims the link
+              :title => "Testing in Scrum with a Waterfall Interaction",
+              :categories => [],
+              :author => "",
+              :description => "Sometimes, when testing user stories in Scrum, there's a final Waterfall  interaction to deal with. The scenario I present here is based on this  situation: a Scrum process with an interaction of sequential phases at  the end of the process to (re)test the whole developed functionality.  These sequential phases are mandatory for our organization, which  follows a Waterfall process for the releases of the product. So, for the  moment at least, we have to deal with this  and my experience is that  we aren't alone.",
+              :content => ""
+            }
+          ]
+        },
         'TechCrunch.xml' => {
           :title => "TechCrunch",
           :url => "http://techcrunch.com",
