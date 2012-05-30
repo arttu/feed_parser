@@ -13,7 +13,6 @@
 	<sy:updateFrequency>1</sy:updateFrequency>
 			<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" href="http://feeds.feedburner.com/Nodeta" type="application/rss+xml" /><item>
 		<title>Announcing Flowdock - Real-time collaboration for teams</title>
-		<link>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/</link>
 		<comments>http://blog.nodeta.fi/2009/07/05/announcing-flowdock-real-time-collaboration-for-teams/#comments</comments>
 		<pubDate>Sun, 05 Jul 2009 09:25:32 +0000</pubDate>
 		<dc:creator>Karri Saarinen</dc:creator>
