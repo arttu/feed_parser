@@ -49,18 +49,19 @@ class FeedParser
 
     # Some feeds
     def open_or_follow_redirect(feed_url)
-      parsed_url = parse_url(feed_url)
+      parsed_url = URI.parse(feed_url)
 
       connection_options = {"User-Agent" => FeedParser::USER_AGENT}
       connection_options.merge!(@http_options)
-      connection_options[:http_basic_authentication] = parsed_url[:basic_auth] if parsed_url[:basic_auth]
+      connection_options[:http_basic_authentication] = [parsed_url.user, parsed_url.password].compact if parsed_url.userinfo
+      parsed_url.userinfo = ''
 
       connection_options[:redirect] = true if RUBY_VERSION >= '1.9'
 
-      if parsed_url[:protocol]
-        open(parsed_url[:url], connection_options)
+      if parsed_url.scheme
+        open(parsed_url.to_s, connection_options)
       else
-        open(parsed_url[:url])
+        open(parsed_url.to_s)
       end
     rescue RuntimeError => ex
       redirect_url = ex.to_s.split(" ").last
@@ -69,15 +70,6 @@ class FeedParser
       else
         raise ex
       end
-    end
-
-    def parse_url(feed_url)
-      protocol, auth, *the_rest = URI.split(feed_url)
-      # insert a question mark in the beginning of query part of the uri
-      the_rest[-2].insert(0, '?') if the_rest[-2].is_a?(String)
-      url = (protocol && [protocol, the_rest.join].join('://') || the_rest.join)
-      basic_auth = auth.split(':') if auth
-      {:protocol => protocol, :url => url, :basic_auth => basic_auth}
     end
   end
 end
