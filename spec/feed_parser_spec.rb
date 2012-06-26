@@ -20,96 +20,97 @@ describe FeedParser do
 
   describe "#new" do
     it "should forward given http options to the OpenURI" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
+      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
       fp = FeedParser.new(:url => "http://blog.example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
       fp.parse
     end
-  end
 
-  describe FeedParser::Feed, "#new" do
     it "should fetch a feed by url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
-      FeedParser::Feed.new("http://blog.example.com/feed/")
+      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
+      fp = FeedParser.new({:url => "http://blog.example.com/feed/"}.merge(http_connection_options))
+      fp.parse
     end
 
     it "should fetch a feed using basic auth if auth embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user", "pass"])).and_return(feed_xml)
-      FeedParser::Feed.new("http://user:pass@blog.example.com/feed/")
+      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user", "pass"])).and_return(feed_xml)
+      fp = FeedParser.new({:url => "http://user:pass@blog.example.com/feed/"}.merge(http_connection_options))
+      fp.parse
     end
 
     it "should fetch a feed with only a user name embedded to the url" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user"])).and_return(feed_xml)
-      FeedParser::Feed.new("http://user@blog.example.com/feed/")
+      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user"])).and_return(feed_xml)
+      fp = FeedParser.new({:url => "http://user@blog.example.com/feed/"}.merge(http_connection_options))
+      fp.parse
     end
 
-    it "should follow redirect based on the exception message" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: http://example.com/feed -> https://example.com/feed"))
-      FeedParser::Feed.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_return(feed_xml)
-      FeedParser::Feed.new("http://example.com/feed")
+    it "should follow redirect based on the exception message (even if OpenURI don't want to do it)" do
+      FeedParser.any_instance.should_receive(:open).with("http://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: http://example.com/feed -> https://example.com/feed"))
+      FeedParser.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_return(feed_xml)
+      fp = FeedParser.new({:url => "http://example.com/feed"}.merge(http_connection_options))
+      fp.parse
     end
 
-    it "should not follow redirect from secure connection to non-secure one" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: https://example.com/feed -> http://example.com/feed"))
-      FeedParser::Feed.any_instance.should_not_receive(:open).with("http://example.com/feed", http_connection_options)
+    it "should not follow redirect from a secure connection to a non-secure one" do
+      FeedParser.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: https://example.com/feed -> http://example.com/feed"))
+      FeedParser.any_instance.should_not_receive(:open).with("http://example.com/feed", http_connection_options)
       lambda {
-        FeedParser::Feed.new("https://example.com/feed")
+        fp = FeedParser.new({:url => "https://example.com/feed"}.merge(http_connection_options))
+        fp.parse
       }.should raise_error(RuntimeError, "redirection forbidden: https://example.com/feed -> http://example.com/feed")
     end
 
-    it "should use alternate url if there is no valid self url in the received feed xml" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("https://developers.facebook.com/blog/feed", http_connection_options).and_return(feed_xml('facebook.atom.xml'))
-      lambda {
-        feed = FeedParser::Feed.new("https://developers.facebook.com/blog/feed")
-        feed.url.should == "https://developers.facebook.com/blog/feed"
-      }.should_not raise_error
-    end
-
     it "should raise an error unless retrieved XML is not an RSS or an ATOM feed" do
-      FeedParser::Feed.any_instance.should_receive(:open).with("http://example.com/blog/feed/invalid.xml", http_connection_options).and_return("foo bar")
+      FeedParser.any_instance.should_receive(:open).with("http://example.com/blog/feed/invalid.xml", http_connection_options).and_return("foo bar")
       lambda {
-        FeedParser::Feed.new("http://example.com/blog/feed/invalid.xml")
+        fp = FeedParser.new({:url => "http://example.com/blog/feed/invalid.xml"}.merge(http_connection_options))
+        fp.parse
       }.should raise_error(FeedParser::UnknownFeedType, "Feed is not an RSS feed or an ATOM feed")
     end
   end
 
-  describe "#parse" do
-    shared_examples_for "feed parser" do
-      it "should not fail" do
-        lambda {
-          @feed = @feed_parser.parse
-        }.should_not raise_error
+  describe "::Feed" do
+    def case_tester(feed, test_cases)
+      test_cases.each do |test_case|
+        if test_case.last.is_a?(Array)
+          test_case.last.each do |_case|
+            feed.as_json[test_case.first].should include(_case)
+          end
+        else
+          feed.send(test_case.first).should include(test_case.last)
+        end
+      end
+    end
+
+    describe "sanitizer" do
+      it "should sanitize with custom sanitizer" do
+        FeedParser.new(:url => "https://example.com/feed", :sanitizer => NotSaneSanitizer.new)
+
+        feed = FeedParser::Feed.new(feed_xml('sanitize.me.rss.xml'))
+        feed.items.first.content.should_not =~ (/flowdock/i)
+      end
+
+      it "should sanitize custom fields" do
+        FeedParser.new(:url => "https://example.com/feed", :sanitizer => NotSaneSanitizer.new, :fields_to_sanitize => [:author, :content])
+
+        feed = FeedParser::Feed.new(feed_xml('sanitize.me.rss.xml'))
+        feed.items.first.author.should == 'Sanitized'
+      end
+    end
+
+    describe "rss feeds" do
+      it "should be an rss feed" do
+        feed = FeedParser::Feed.new(feed_xml('nodeta.rss.xml'))
+        feed.type.should == :rss
       end
 
       it "should populate every item" do
-        @feed = @feed_parser.parse
-        @feed.items.each do |item|
+        feed = FeedParser::Feed.new(feed_xml('nodeta.rss.xml'))
+        feed.items.each do |item|
           [:guid, :link, :title, :categories, :author, :content].each do |attribute|
             item.send(attribute).should_not be_nil
             item.send(attribute).should_not be_empty
           end
         end
-      end
-    end
-
-    def case_tester(test_cases)
-      test_cases.each do |test_case|
-        if test_case.last.is_a?(Array)
-          test_case.last.each do |_case|
-            @feed.as_json[test_case.first].should include(_case)
-          end
-        else
-          @feed.send(test_case.first).should include(test_case.last)
-        end
-      end
-    end
-
-    describe "rss feeds" do
-      before :each do
-        @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', 'nodeta.rss.xml'))
-      end
-
-      after :each do
-        @feed.type.should == :rss
       end
 
       {
@@ -165,40 +166,27 @@ describe FeedParser do
         },
       }.each do |rss_fixture, test_cases|
         it "should parse #{rss_fixture}" do
-          @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', rss_fixture))
+          feed = FeedParser::Feed.new(feed_xml(rss_fixture))
 
-          @feed = @feed_parser.parse
-
-          case_tester(test_cases)
+          case_tester(feed, test_cases)
         end
       end
-
-      it "should sanitize with custom sanitizer" do
-        @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', 'sanitize.me.rss.xml'), :sanitizer => NotSaneSanitizer.new)
-
-        @feed = @feed_parser.parse
-
-        @feed.items.first.content.should_not =~ (/flowdock/i)
-      end
-
-      it "should sanitize custom fields" do
-        @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', 'sanitize.me.rss.xml'), :sanitizer => NotSaneSanitizer.new, :fields_to_sanitize => [:author, :content])
-
-        @feed = @feed_parser.parse
-
-        @feed.items.first.author.should == 'Sanitized'
-      end
-
-      it_should_behave_like "feed parser"
     end
 
     describe "atom feeds" do
-      before :each do
-        @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', 'smashingmagazine.atom.xml'))
+      it "should be an atom feed" do
+        feed = FeedParser::Feed.new(feed_xml('smashingmagazine.atom.xml'))
+        feed.type.should == :atom
       end
 
-      after :each do
-        @feed.type.should == :atom
+      it "should populate every item" do
+        feed = FeedParser::Feed.new(feed_xml('smashingmagazine.atom.xml'))
+        feed.items.each do |item|
+          [:guid, :link, :title, :categories, :author, :content].each do |attribute|
+            item.send(attribute).should_not be_nil
+            item.send(attribute).should_not be_empty
+          end
+        end
       end
 
       {
@@ -230,15 +218,18 @@ describe FeedParser do
         }
       }.each do |atom_fixture, test_cases|
         it "should parse #{atom_fixture}" do
-          @feed_parser = FeedParser.new(:url => File.join(File.dirname(__FILE__), 'fixtures', atom_fixture))
+          feed = FeedParser::Feed.new(feed_xml(atom_fixture))
 
-          @feed = @feed_parser.parse
-
-          case_tester(test_cases)
+          case_tester(feed, test_cases)
         end
       end
 
-      it_should_behave_like "feed parser"
+      it "should use alternate url if there is no valid self url in the received feed xml" do
+        lambda {
+          feed = FeedParser::Feed.new(feed_xml('facebook.atom.xml'))
+          feed.url.should == "https://developers.facebook.com/blog/feed"
+        }.should_not raise_error
+      end
     end
   end
 end
