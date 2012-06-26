@@ -53,8 +53,10 @@ class FeedParser
 
       connection_options = {"User-Agent" => FeedParser::USER_AGENT}
       connection_options.merge!(@http_options)
-      connection_options[:http_basic_authentication] = [parsed_url.user, parsed_url.password].compact if parsed_url.userinfo
-      parsed_url.userinfo = ''
+      if parsed_url.userinfo
+        connection_options[:http_basic_authentication] = [parsed_url.user, parsed_url.password].compact
+        parsed_url.userinfo = parsed_url.user = parsed_url.password = nil
+      end
 
       connection_options[:redirect] = true if RUBY_VERSION >= '1.9'
 
