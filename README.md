@@ -23,7 +23,7 @@ Add to Gemfile
     # sanitizing custom field set
     fp = FeedParser.new(:url => "http://example.com/feed/", :sanitizer => MyBestestSanitizer.new, :fields_to_sanitize => [:title, :content])
     
-    # parse the feed
+    # retrieve the feed xml and parse it
     feed = fp.parse
     
     # using parsed feed in your code
@@ -42,7 +42,10 @@ If the fetched XML is not a valid RSS or an ATOM feed, a FeedParser::UnknownFeed
 
 ## Running tests
 
-Install dependencies by running `bundle install`.
+Install dependencies:
+
+    $ gem install bundler
+    $ bundle install
 
 Run rspec tests:
 

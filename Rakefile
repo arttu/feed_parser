@@ -18,3 +18,18 @@ end
 
 desc "Default: Run specs"
 task :default => :spec
+
+namespace :rubies do
+  rvm_rubies_command = "rvm 1.8.7-p302@feed_parser,1.9.3-p194@feed_parser do"
+
+  desc "Update dependencies for all Ruby versions"
+  task :update_dependencies do
+    system("#{rvm_rubies_command} bundle install")
+    system("#{rvm_rubies_command} bundle update")
+  end
+
+  desc "Run tests with Ruby versions 1.8.7 and 1.9.3"
+  task :spec do
+    system("#{rvm_rubies_command} bundle exec rake spec")
+  end
+end

@@ -7,19 +7,18 @@ require 'feed_parser'
 Gem::Specification.new do |s|
   s.name        = 'feed_parser'
   s.version     = FeedParser::VERSION
-  s.platform    = Gem::Platform::RUBY
   s.authors     = ['Arttu Tervo']
   s.email       = ['arttu.tervo@gmail.com']
-  s.homepage    = 'http://github.com/arttu/feed_parser'
+  s.homepage    = 'https://github.com/arttu/feed_parser'
   s.summary     = %q{Rss and Atom feed parser}
   s.description = %q{Rss and Atom feed parser with sanitizer support built on top of Nokogiri.}
 
   s.add_dependency 'nokogiri'
 
-  s.add_development_dependency 'rspec-rails', '~> 2.6'
+  s.add_development_dependency 'rake', '>= 0.9'
+  s.add_development_dependency 'rspec', '>= 2.10'
 
   s.extra_rdoc_files = %w[README.md]
-  s.require_paths = %w[lib]
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
