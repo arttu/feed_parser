@@ -8,6 +8,7 @@ class FeedParser
   USER_AGENT = "Ruby / FeedParser gem"
 
   class FeedParser::UnknownFeedType < Exception ; end
+  class FeedParser::InvalidURI < Exception ; end
 
   def initialize(opts)
     @url = opts[:url]
@@ -42,10 +43,10 @@ class FeedParser
 
     @http_options[:redirect] = true if RUBY_VERSION >= '1.9'
 
-    if uri.scheme
+    if ['http', 'https'].include?(uri.scheme)
       open(uri.to_s, @http_options)
     else
-      open(uri.to_s)
+      raise FeedParser::InvalidURI.new("Only URIs with http or https protocol are supported")
     end
   rescue RuntimeError => ex
     redirect_url = ex.to_s.split(" ").last

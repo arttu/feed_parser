@@ -66,6 +66,13 @@ describe FeedParser do
         fp.parse
       }.should raise_error(FeedParser::UnknownFeedType, "Feed is not an RSS feed or an ATOM feed")
     end
+
+    it "should not allow feeds without http(s) protocol" do
+      lambda {
+        fp = FeedParser.new({:url => "feed://example.com/feed"}.merge(http_connection_options))
+        fp.parse
+      }.should raise_error(FeedParser::InvalidURI, "Only URIs with http or https protocol are supported")
+    end
   end
 
   describe "::Feed" do
