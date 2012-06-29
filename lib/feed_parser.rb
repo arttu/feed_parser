@@ -29,6 +29,8 @@ class FeedParser
   def parse
     feed_xml = open_or_follow_redirect(@url)
     @feed ||= Feed.new(feed_xml)
+    feed_xml.close! if feed_xml.class.to_s == 'Tempfile'
+    @feed
   end
 
   private
