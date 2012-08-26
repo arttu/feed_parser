@@ -73,6 +73,11 @@ describe FeedParser do
         fp.parse
       }.should raise_error(FeedParser::InvalidURI, "Only URIs with http or https protocol are supported")
     end
+
+    it "should parse feeds from the :feed_xml option instead of the :url" do
+      fp = FeedParser.new(:feed_xml => "<rss><channel><item><title>feed_xml test</title><link>http://example.com</link></item></channel></rss>")
+      fp.parse.items.first.title == "feed_xml test"
+    end
   end
 
   describe "::Feed" do
