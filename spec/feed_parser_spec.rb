@@ -18,6 +18,19 @@ describe FeedParser do
     opts
   end
 
+  describe ".parse" do
+    it "should instantiate a new FeedParser and return a parsed feed" do
+      feed = FeedParser::Feed.new(feed_xml)
+
+      fp = FeedParser.new(:url => "http://blog.example.com/feed/")
+      fp.should_receive(:parse).and_return(feed)
+
+      FeedParser.should_receive(:new).with(:url => "http://blog.example.com/feed/").and_return(fp)
+
+      FeedParser.parse(:url => "http://blog.example.com/feed/").should == feed
+    end
+  end
+
   describe "#new" do
     it "should forward given http options to the OpenURI" do
       FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
