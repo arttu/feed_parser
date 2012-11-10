@@ -18,6 +18,19 @@ describe FeedParser do
     opts
   end
 
+  describe ".parse" do
+    it "should instantiate a new FeedParser and return a parsed feed" do
+      feed = FeedParser::Feed.new(feed_xml)
+
+      fp = FeedParser.new(:url => "http://blog.example.com/feed/")
+      fp.should_receive(:parse).and_return(feed)
+
+      FeedParser.should_receive(:new).with(:url => "http://blog.example.com/feed/").and_return(fp)
+
+      FeedParser.parse(:url => "http://blog.example.com/feed/").should == feed
+    end
+  end
+
   describe "#new" do
     it "should forward given http options to the OpenURI" do
       FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
@@ -120,6 +133,12 @@ describe FeedParser do
         end
       end
 
+      it "should set the published date" do
+        feed = FeedParser::Feed.new(feed_xml('nodeta.rss.xml'))
+        item = feed.items.first
+        item.published.should == DateTime.parse("Jul 5, 2009 09:25:32 GMT")
+      end
+
       {
         'nodeta.rss.xml' => {
           :title => "Nodeta",
@@ -129,6 +148,7 @@ describe FeedParser do
                 :guid => "http://blog.nodeta.fi/?p=73",
                 :link => "http://blog.nodeta.fi/2009/01/16/ruby-187-imported/",
                 :title => "Ruby 1.8.7 imported",
+                :published => DateTime.parse("Jan 16, 2009 15:29:52 GMT"),
                 :categories => ["APIdock", "Ruby"],
                 :author => "Otto Hilska",
                 :description => "I just finished importing Ruby 1.8.7 to APIdock. It&#8217;s also the new default version, because usually it is better documented. However, there&#8217;re some incompatibilities between 1.8.6 and 1.8.7, so be sure to check the older documentation when something seems to be wrong.\n",
@@ -144,6 +164,7 @@ describe FeedParser do
                 :guid => "basecamp.00000000.Comment.1234567",
                 :link => "https://awesome.basecamphq.com/unique_item_link",
                 :title => "Comment posted: Re: Howdy how?",
+                :published => DateTime.parse("Nov 9, 2011 20:35:18 GMT"),
                 :categories => [],
                 :author => "Ffuuuuuuu- Le.",
                 :description => "<div>trololooo</div><p>Company: awesome | Project: Awesome project</p>",
@@ -159,6 +180,7 @@ describe FeedParser do
               :guid => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction",
               :link => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction", # trims the link
               :title => "Testing in Scrum with a Waterfall Interaction",
+              :published => DateTime.parse("May 23, 2012 11:07:03 GMT"),
               :categories => [],
               :author => "",
               :description => "Sometimes, when testing user stories in Scrum, there's a final Waterfall  interaction to deal with. The scenario I present here is based on this  situation: a Scrum process with an interaction of sequential phases at  the end of the process to (re)test the whole developed functionality.  These sequential phases are mandatory for our organization, which  follows a Waterfall process for the releases of the product. So, for the  moment at least, we have to deal with this  and my experience is that  we aren't alone.",
@@ -196,6 +218,18 @@ describe FeedParser do
         end
       end
 
+      it "should set the published date if present" do
+        feed = FeedParser::Feed.new(feed_xml('smashingmagazine.atom.xml'))
+        item = feed.items.first
+        item.published.should == DateTime.parse("Jul 20, 2009 8:43:22 GMT")
+      end
+
+      it "should default the published date to the updated date if not present" do
+        feed = FeedParser::Feed.new(feed_xml('facebook.atom.xml'))
+        item = feed.items.first
+        item.published.should == DateTime.parse("Dec 30, 2011 17:00 GMT")
+      end
+
       {
         'gcal.atom.xml' => {
           :title => "dokaus.net",
@@ -213,6 +247,7 @@ describe FeedParser do
                 :guid => "urn:uuid:132266233552163",
                 :link => "http://developers.facebook.com/blog/post/614/",
                 :title => "Breaking Change: JavaScript SDK to oauth:true on December 13th",
+                :published => DateTime.parse("Dec 12, 2011 17:00 GMT"),
                 :categories=>[],
                 :author => "",
                 :description => "",
