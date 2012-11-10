@@ -7,6 +7,7 @@ class FeedParser
     def initialize(item)
       @guid = item.xpath(Dsl[@type][:item_guid]).text
       @title = item.xpath(Dsl[@type][:item_title]).text
+      @published = parse_datetime(item.xpath(Dsl[@type][:item_published]).text)
       @author = item.xpath(Dsl[@type][:item_author]).text
       @description = possible_html_content(item.xpath(Dsl[@type][:item_description]))
       @content = possible_html_content(item.xpath(Dsl[@type][:item_content]))
@@ -30,6 +31,7 @@ class FeedParser
         :guid => guid,
         :link => link,
         :title => title,
+        :published => published,
         :categories => categories,
         :author => author,
         :description => description,
@@ -51,6 +53,15 @@ class FeedParser
           element.text
       end
     end
+
+    def parse_datetime(string)
+      begin
+        DateTime.parse(string) unless string.empty?
+      rescue
+        warn "Failed to parse date #{string.inspect}"
+        nil
+      end
+    end
   end
 
   class RssItem < FeedItem
@@ -67,7 +78,12 @@ class FeedParser
       @type = :atom
       super
       @link = item.xpath(Dsl[@type][:item_link]).attribute("href").text.strip
+      @updated = parse_datetime(item.xpath(Dsl[@type][:item_updated]).text)
       @categories = item.xpath(Dsl[@type][:item_categories]).map{|cat| cat.attribute("term").text}
+    end
+
+    def published
+      @published ||= @updated
     end
   end
 end
