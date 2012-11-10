@@ -8,6 +8,11 @@ class FeedParser
   class FeedParser::UnknownFeedType < Exception ; end
   class FeedParser::InvalidURI < Exception ; end
 
+  def self.parse(opts)
+    fp = FeedParser.new(opts)
+    fp.parse
+  end
+
   def initialize(opts)
     @url = opts[:url]
     @http_options = {"User-Agent" => FeedParser::USER_AGENT}.merge(opts[:http] || {})
