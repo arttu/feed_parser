@@ -27,13 +27,13 @@ class FeedParser
 
     def as_json
       {
-        :guid => guid,
-        :link => link,
-        :title => title,
-        :categories => categories,
-        :author => author,
-        :description => description,
-        :content => content
+        :guid => self.guid,
+        :link => self.link,
+        :title => self.title,
+        :categories => self.categories,
+        :author => self.author,
+        :description => self.description,
+        :content => self.content
       }
     end
 

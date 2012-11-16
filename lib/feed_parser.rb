@@ -3,8 +3,6 @@ require 'nokogiri'
 
 class FeedParser
 
-  VERSION = "0.3.4"
-
   USER_AGENT = "Ruby / FeedParser gem"
 
   class FeedParser::UnknownFeedType < Exception ; end
@@ -15,6 +13,7 @@ class FeedParser
     @http_options = {"User-Agent" => FeedParser::USER_AGENT}.merge(opts[:http] || {})
     @@sanitizer = (opts[:sanitizer] || SelfSanitizer.new)
     @@fields_to_sanitize = (opts[:fields_to_sanitize] || [:content])
+    @feed_xml = opts[:feed_xml]
     self
   end
 
@@ -27,7 +26,11 @@ class FeedParser
   end
 
   def parse
-    feed_xml = open_or_follow_redirect(@url)
+    if @feed_xml
+      feed_xml = @feed_xml
+    else
+      feed_xml = open_or_follow_redirect(@url)
+    end
     @feed ||= Feed.new(feed_xml)
     feed_xml.close! if feed_xml.class.to_s == 'Tempfile'
     @feed

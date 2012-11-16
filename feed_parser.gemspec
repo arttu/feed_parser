@@ -1,12 +1,9 @@
 # feed_parser.gemspec
 # -*- encoding: utf-8 -*-
 
-$:.push File.expand_path("../lib", __FILE__)
-require 'feed_parser'
-
 Gem::Specification.new do |s|
   s.name        = 'feed_parser'
-  s.version     = FeedParser::VERSION
+  s.version     = "0.3.4"
   s.authors     = ['Arttu Tervo']
   s.email       = ['arttu.tervo@gmail.com']
   s.homepage    = 'https://github.com/arttu/feed_parser'
