@@ -6,7 +6,8 @@ Rss and Atom feed parser built on top of Nokogiri. Supports custom sanitizers.
 
 [![Build Status](https://secure.travis-ci.org/arttu/feed_parser.png)](http://travis-ci.org/arttu/feed_parser)
 
-FeedParser gem is tested on Ruby 1.8.7 and 1.9.3.
+FeedParser gem is tested on Ruby 1.9.3 and 2.0.0.
+1.8.7 should work with Nokogiri < 1.6.0.
 
 ## Install
 
