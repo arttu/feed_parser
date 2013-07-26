@@ -16,17 +16,28 @@ Add to Gemfile
 
 ## Usage
 
-    # the most basic use case
+#### Parse from URL
+
     fp = FeedParser.new(:url => "http://example.com/feed/")
-    # with sanitizer
+    feed = fp.parse
+
+Optionally pass HTTP options, see more from the OpenURI documentation: http://apidock.com/ruby/OpenURI
+
+    fp = FeedParser.new(:url => "http://example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
+
+#### Parse from an XML string
+
+    fp = FeedParser.new(:feed_xml => "<rss>...</rss>")
+    feed = fp.parse
+
+#### Use sanitizer
+
     fp = FeedParser.new(:url => "http://example.com/feed/", :sanitizer => MyBestestSanitizer.new)
     # sanitizing custom field set
     fp = FeedParser.new(:url => "http://example.com/feed/", :sanitizer => MyBestestSanitizer.new, :fields_to_sanitize => [:title, :content])
-    
-    # retrieve the feed xml and parse it
-    feed = fp.parse
-    
-    # using parsed feed in your code
+
+#### Using parsed feed in your code
+
     feed.as_json
     # => {:title => "Feed title", :url => "http://example.com/feed/", :items => [{:guid => , :title => , :author => ...}]}
     
@@ -34,11 +45,7 @@ Add to Gemfile
       pp feed_item
     end
 
-    # you can also pass http options to be used for the connection
-    # for available options, check out the OpenURI documentation: http://apidock.com/ruby/OpenURI
-    fp = FeedParser.new(:url => "http://example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
-
-If the fetched XML is not a valid RSS or an ATOM feed, a FeedParser::UnknownFeedType is raised in FeedParser#parse.
+If the XML is not a valid RSS or an ATOM feed, a FeedParser::UnknownFeedType is raised in FeedParser#parse.
 
 ## Running tests
 
