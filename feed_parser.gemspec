@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'feed_parser'
-  s.version     = "0.3.4"
+  s.version     = "0.3.5"
   s.authors     = ['Arttu Tervo']
   s.email       = ['arttu.tervo@gmail.com']
   s.homepage    = 'https://github.com/arttu/feed_parser'
