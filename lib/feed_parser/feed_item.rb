@@ -5,7 +5,10 @@ class FeedParser
     attr_reader :type
 
     def initialize(item)
-      @guid = item.xpath(Dsl[@type][:item_guid]).text
+      item_guid = item.xpath(Dsl[@type][:item_guid])
+      @guid = item_guid.text
+      @is_perma_link = item_guid.first && item_guid.attribute("isPermaLink")
+      @is_perma_link = @is_perma_link.value == 'true' if @is_perma_link
       @title = item.xpath(Dsl[@type][:item_title]).text
       @published = parse_datetime(item.xpath(Dsl[@type][:item_published]).text)
       @author = item.xpath(Dsl[@type][:item_author]).text
@@ -29,6 +32,7 @@ class FeedParser
     def as_json
       {
         :guid => self.guid,
+        :is_perma_link => self.is_perma_link,
         :link => self.link,
         :title => self.title,
         :published => self.published,

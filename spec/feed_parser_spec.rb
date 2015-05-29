@@ -151,6 +151,7 @@ describe FeedParser do
           :items => [
               {
                 :guid => "http://blog.nodeta.fi/?p=73",
+                :is_perma_link => false,
                 :link => "http://blog.nodeta.fi/2009/01/16/ruby-187-imported/",
                 :title => "Ruby 1.8.7 imported",
                 :published => DateTime.parse("Jan 16, 2009 15:29:52 GMT"),
@@ -167,6 +168,7 @@ describe FeedParser do
           :items => [
               {
                 :guid => "basecamp.00000000.Comment.1234567",
+                :is_perma_link => false,
                 :link => "https://awesome.basecamphq.com/unique_item_link",
                 :title => "Comment posted: Re: Howdy how?",
                 :published => DateTime.parse("Nov 9, 2011 20:35:18 GMT"),
@@ -183,6 +185,7 @@ describe FeedParser do
           :items => [
             {
               :guid => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction",
+              :is_perma_link => nil,
               :link => "http://scrumalliance.org/articles/424-testing-in-scrum-with-a-waterfall-interaction", # trims the link
               :title => "Testing in Scrum with a Waterfall Interaction",
               :published => DateTime.parse("May 23, 2012 11:07:03 GMT"),
@@ -250,6 +253,7 @@ describe FeedParser do
           :items => [
               {
                 :guid => "urn:uuid:132266233552163",
+                :is_perma_link => nil,
                 :link => "http://developers.facebook.com/blog/post/614/",
                 :title => "Breaking Change: JavaScript SDK to oauth:true on December 13th",
                 :published => DateTime.parse("Dec 12, 2011 17:00 GMT"),
