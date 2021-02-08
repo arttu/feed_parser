@@ -33,39 +33,39 @@ describe FeedParser do
 
   describe "#new" do
     it "should forward given http options to the OpenURI" do
-      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
+      URI.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
       fp = FeedParser.new(:url => "http://blog.example.com/feed/", :http => {:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE})
       fp.parse
     end
 
     it "should fetch a feed by url" do
-      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
+      URI.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options).and_return(feed_xml)
       fp = FeedParser.new({:url => "http://blog.example.com/feed/"}.merge(http_connection_options))
       fp.parse
     end
 
     it "should fetch a feed using basic auth if auth embedded to the url" do
-      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user", "pass"])).and_return(feed_xml)
+      URI.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user", "pass"])).and_return(feed_xml)
       fp = FeedParser.new({:url => "http://user:pass@blog.example.com/feed/"}.merge(http_connection_options))
       fp.parse
     end
 
     it "should fetch a feed with only a user name embedded to the url" do
-      FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user"])).and_return(feed_xml)
+      URI.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:http_basic_authentication => ["user"])).and_return(feed_xml)
       fp = FeedParser.new({:url => "http://user@blog.example.com/feed/"}.merge(http_connection_options))
       fp.parse
     end
 
     it "should follow redirect based on the exception message (even if OpenURI don't want to do it)" do
-      FeedParser.any_instance.should_receive(:open).with("http://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: http://example.com/feed -> https://example.com/feed"))
-      FeedParser.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_return(feed_xml)
+      URI.should_receive(:open).with("http://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: http://example.com/feed -> https://example.com/feed"))
+      URI.should_receive(:open).with("https://example.com/feed", http_connection_options).and_return(feed_xml)
       fp = FeedParser.new({:url => "http://example.com/feed"}.merge(http_connection_options))
       fp.parse
     end
 
     it "should not follow redirect from a secure connection to a non-secure one" do
-      FeedParser.any_instance.should_receive(:open).with("https://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: https://example.com/feed -> http://example.com/feed"))
-      FeedParser.any_instance.should_not_receive(:open).with("http://example.com/feed", http_connection_options)
+      URI.should_receive(:open).with("https://example.com/feed", http_connection_options).and_raise(RuntimeError.new("redirection forbidden: https://example.com/feed -> http://example.com/feed"))
+      URI.should_not_receive(:open).with("http://example.com/feed", http_connection_options)
       lambda {
         fp = FeedParser.new({:url => "https://example.com/feed"}.merge(http_connection_options))
         fp.parse
@@ -73,7 +73,7 @@ describe FeedParser do
     end
 
     it "should raise an error unless retrieved XML is not an RSS or an ATOM feed" do
-      FeedParser.any_instance.should_receive(:open).with("http://example.com/blog/feed/invalid.xml", http_connection_options).and_return("foo bar")
+      URI.should_receive(:open).with("http://example.com/blog/feed/invalid.xml", http_connection_options).and_return("foo bar")
       lambda {
         fp = FeedParser.new({:url => "http://example.com/blog/feed/invalid.xml"}.merge(http_connection_options))
         fp.parse
