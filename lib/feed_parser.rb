@@ -54,7 +54,7 @@ class FeedParser
     @http_options[:redirect] = true if RUBY_VERSION >= '1.9'
 
     if ['http', 'https'].include?(uri.scheme)
-      open(uri.to_s, @http_options)
+      URI.open(uri.to_s, @http_options)
     else
       raise FeedParser::InvalidURI.new("Only URIs with http or https protocol are supported")
     end
